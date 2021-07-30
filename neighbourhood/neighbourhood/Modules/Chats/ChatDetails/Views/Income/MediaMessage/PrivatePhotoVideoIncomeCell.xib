@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrivatePhotoVideoIncomeCell" id="AIn-8O-hMr" customClass="PrivatePhotoVideoIncomeCell" customModule="Bestyn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="216"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AIn-8O-hMr" id="I4O-T1-z99">
+                <rect key="frame" x="0.0" y="0.0" width="281" height="216"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jb3-y4-vI7">
+                        <rect key="frame" x="20" y="8" width="203" height="198"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sPy-H1-LkS">
+                                <rect key="frame" x="2" y="2" width="199" height="194"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sv7-7I-4Gs">
+                                        <rect key="frame" x="15" y="0.0" width="169" height="58.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" name="mainBlack"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CuK-NK-xPc">
+                                        <rect key="frame" x="0.0" y="66.5" width="199" height="127.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="CuK-NK-xPc" secondAttribute="height" multiplier="53:34" id="9i1-zU-GVd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Sv7-7I-4Gs" firstAttribute="width" secondItem="sPy-H1-LkS" secondAttribute="width" constant="-30" id="6cT-p3-N2v"/>
+                                    <constraint firstItem="CuK-NK-xPc" firstAttribute="width" secondItem="sPy-H1-LkS" secondAttribute="width" id="vE0-VW-Q83"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sPy-H1-LkS" secondAttribute="trailing" constant="2" id="0HB-el-tXu"/>
+                            <constraint firstItem="sPy-H1-LkS" firstAttribute="top" secondItem="jb3-y4-vI7" secondAttribute="top" constant="2" id="40l-fv-JWa"/>
+                            <constraint firstItem="sPy-H1-LkS" firstAttribute="leading" secondItem="jb3-y4-vI7" secondAttribute="leading" constant="2" id="4Qs-gL-PaP"/>
+                            <constraint firstAttribute="bottom" secondItem="sPy-H1-LkS" secondAttribute="bottom" constant="2" id="ehN-Zp-4M6"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-Ix-y1X">
+                        <rect key="frame" x="133.5" y="174" width="79.5" height="22"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZMZ-qF-JF1">
+                                <rect key="frame" x="6" y="0.0" width="67.5" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="12.15 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQb-k3-Pps">
+                                        <rect key="frame" x="0.0" y="4.5" width="47.5" height="13"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                        <color key="textColor" name="whiteBackground"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" edited" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vx-38-mgE">
+                                        <rect key="frame" x="50.5" y="4.5" width="0.0" height="13"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                        <color key="textColor" name="whiteBackground"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3i-ms-wFO">
+                                        <rect key="frame" x="53.5" y="0.0" width="14" height="22"/>
+                                        <state key="normal" image="chat_voice_income_icon"/>
+                                        <connections>
+                                            <action selector="voiceButtonDidTap:" destination="AIn-8O-hMr" eventType="touchUpInside" id="2g6-qQ-WRE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Vam-nD-k9I"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZMZ-qF-JF1" secondAttribute="bottom" id="0Sl-00-Ktw"/>
+                            <constraint firstAttribute="trailing" secondItem="ZMZ-qF-JF1" secondAttribute="trailing" constant="6" id="4CH-4x-bih"/>
+                            <constraint firstItem="ZMZ-qF-JF1" firstAttribute="top" secondItem="sdD-Ix-y1X" secondAttribute="top" id="I00-ns-t0c"/>
+                            <constraint firstItem="ZMZ-qF-JF1" firstAttribute="leading" secondItem="sdD-Ix-y1X" secondAttribute="leading" constant="6" id="N3l-1L-Aqm"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="11"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="jb3-y4-vI7" secondAttribute="bottom" constant="10" id="Eov-nf-dyK"/>
+                    <constraint firstItem="jb3-y4-vI7" firstAttribute="leading" secondItem="I4O-T1-z99" secondAttribute="leading" constant="20" id="J2j-da-duK"/>
+                    <constraint firstItem="jb3-y4-vI7" firstAttribute="top" secondItem="I4O-T1-z99" secondAttribute="top" constant="8" id="Nza-MT-yI4"/>
+                    <constraint firstAttribute="trailing" secondItem="jb3-y4-vI7" secondAttribute="trailing" constant="58" id="ZP3-7G-Z1z"/>
+                    <constraint firstItem="sdD-Ix-y1X" firstAttribute="bottom" secondItem="jb3-y4-vI7" secondAttribute="bottom" constant="-10" id="a2e-9l-KVh"/>
+                    <constraint firstItem="sdD-Ix-y1X" firstAttribute="trailing" secondItem="jb3-y4-vI7" secondAttribute="trailing" constant="-10" id="isf-SZ-KyW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="attachImageView" destination="CuK-NK-xPc" id="zfY-kD-Xix"/>
+                <outlet property="chatBackgroundView" destination="jb3-y4-vI7" id="VbZ-yP-IGF"/>
+                <outlet property="chatMessageTextView" destination="Sv7-7I-4Gs" id="M8G-ZH-FQh"/>
+                <outlet property="editLabel" destination="3Vx-38-mgE" id="0Q5-U4-SSq"/>
+                <outlet property="messagDateLabel" destination="bQb-k3-Pps" id="NBD-Wz-eUg"/>
+                <outlet property="voiceButton" destination="F3i-ms-wFO" id="S1z-Kg-09Y"/>
+            </connections>
+            <point key="canvasLocation" x="234.05797101449278" y="105.13392857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chat_voice_income_icon" width="14" height="14"/>
+        <namedColor name="mainBlack">
+            <color red="0.10196078431372549" green="0.062745098039215685" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

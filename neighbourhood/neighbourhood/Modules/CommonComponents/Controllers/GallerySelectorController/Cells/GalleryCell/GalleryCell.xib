@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="galleryCell" id="gTV-IL-0wX" customClass="GalleryCell" customModule="Bestyn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i42-w6-4Be">
+                        <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35J-mY-qy7">
+                        <rect key="frame" x="89" y="2" width="24" height="24"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.23999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="SMH-ty-spl"/>
+                            <constraint firstAttribute="height" constant="24" id="irO-He-8Ne"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf8-si-vU3">
+                        <rect key="frame" x="8" y="8" width="53" height="20"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Rf0-vC-FK7">
+                                <rect key="frame" x="8" y="4" width="37" height="12"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gallery_video_icon" translatesAutoresizingMaskIntoConstraints="NO" id="nwJ-nP-5L4">
+                                        <rect key="frame" x="0.0" y="0.0" width="14.5" height="12"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nX6-MG-egi">
+                                        <rect key="frame" x="18.5" y="0.0" width="18.5" height="12"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.23999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rf0-vC-FK7" firstAttribute="leading" secondItem="Gf8-si-vU3" secondAttribute="leading" constant="8" id="1AS-1y-tBK"/>
+                            <constraint firstItem="Rf0-vC-FK7" firstAttribute="top" secondItem="Gf8-si-vU3" secondAttribute="top" constant="4" id="LIu-5S-R5U"/>
+                            <constraint firstAttribute="height" constant="20" id="crF-tz-ssI"/>
+                            <constraint firstAttribute="bottom" secondItem="Rf0-vC-FK7" secondAttribute="bottom" constant="4" id="m2j-yk-vZA"/>
+                            <constraint firstAttribute="trailing" secondItem="Rf0-vC-FK7" secondAttribute="trailing" constant="8" id="my1-e1-kqU"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Log-AY-SzG">
+                        <rect key="frame" x="92" y="92" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="nNx-o8-l6B"/>
+                            <constraint firstAttribute="width" constant="20" id="pNp-a5-2ZS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Gf8-si-vU3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="EA3-5K-VW7"/>
+                <constraint firstAttribute="bottom" secondItem="i42-w6-4Be" secondAttribute="bottom" id="JEz-TT-zpU"/>
+                <constraint firstItem="35J-mY-qy7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="W4m-mN-pC3"/>
+                <constraint firstAttribute="trailing" secondItem="Log-AY-SzG" secondAttribute="trailing" constant="3" id="YPo-va-yGI"/>
+                <constraint firstAttribute="trailing" secondItem="35J-mY-qy7" secondAttribute="trailing" constant="2" id="Yai-bO-hZp"/>
+                <constraint firstAttribute="bottom" secondItem="Log-AY-SzG" secondAttribute="bottom" constant="3" id="a5I-Ao-0Ho"/>
+                <constraint firstAttribute="trailing" secondItem="i42-w6-4Be" secondAttribute="trailing" id="fod-dC-DVI"/>
+                <constraint firstItem="Gf8-si-vU3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="lml-Wm-yZK"/>
+                <constraint firstItem="i42-w6-4Be" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tr5-km-OSu"/>
+                <constraint firstItem="i42-w6-4Be" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vtp-V9-WfS"/>
+            </constraints>
+            <size key="customSize" width="329" height="247"/>
+            <connections>
+                <outlet property="imageView" destination="i42-w6-4Be" id="Hzg-Cf-mLI"/>
+                <outlet property="loadingStateImageView" destination="Log-AY-SzG" id="AMJ-6o-By2"/>
+                <outlet property="selectedLabel" destination="35J-mY-qy7" id="QMq-2g-E4A"/>
+                <outlet property="videoDurationLabel" destination="nX6-MG-egi" id="UZl-SG-gbr"/>
+                <outlet property="videoInfoView" destination="Gf8-si-vU3" id="IIc-FL-RLs"/>
+            </connections>
+            <point key="canvasLocation" x="277.536231884058" y="189.84375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="gallery_video_icon" width="14.5" height="14"/>
+    </resources>
+</document>

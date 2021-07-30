@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrivateChatFileOutcomeCell" id="8da-Pg-Is8" customClass="PrivateChatFileOutcomeCell" customModule="Bestyn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8da-Pg-Is8" id="lU1-kK-YHI">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="134"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaA-AU-ep4">
+                        <rect key="frame" x="60" y="10" width="334" height="114"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prm-ib-hyx">
+                                <rect key="frame" x="326" y="84" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                <color key="textColor" name="whiteBackground"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="iIk-8q-gvb">
+                                <rect key="frame" x="241.5" y="88" width="80.5" height="18"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfP-0b-Oez">
+                                        <rect key="frame" x="0.0" y="0.0" width="14" height="18"/>
+                                        <state key="normal" image="chat_voice_outcome_icon"/>
+                                        <connections>
+                                            <action selector="voiceButtonDidTap:" destination="8da-Pg-Is8" eventType="touchUpInside" id="iGa-eF-MLd"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo3-W7-EUj">
+                                        <rect key="frame" x="18" y="0.0" width="50" height="18"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                        <color key="textColor" name="whiteTransparent"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qL-w5-cVI">
+                                        <rect key="frame" x="70" y="0.0" width="0.0" height="18"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                        <color key="textColor" name="whiteTransparent"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sent_unread_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zCh-bp-8LL">
+                                        <rect key="frame" x="72" y="0.0" width="8.5" height="18"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="NR5-dE-3rN"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="333-oa-lUX" customClass="MBCircularProgressBarView">
+                                <rect key="frame" x="5" y="64" width="46" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="RKc-jp-ATe"/>
+                                    <constraint firstAttribute="width" constant="46" id="ukB-fO-VD6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                        <color key="value" name="accentGreen"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                        <color key="value" name="accentGreen"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressCapType">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="valueDecimalFontSize">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                        <color key="value" name="progressBarBackground"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineStrokeColor">
+                                        <color key="value" name="progressBarBackground"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressRotationAngle">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="decimalPlaces">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBh-8c-6HP">
+                                <rect key="frame" x="8" y="71" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HdZ-bz-fUZ"/>
+                                    <constraint firstAttribute="width" constant="40" id="Wl9-2K-xyJ"/>
+                                </constraints>
+                                <state key="normal" image="load_file_img"/>
+                                <connections>
+                                    <action selector="loadButtonDidTap:" destination="8da-Pg-Is8" eventType="touchUpInside" id="fPU-jB-hBb"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUr-dX-vdY">
+                                <rect key="frame" x="0.0" y="58" width="334" height="1"/>
+                                <color key="backgroundColor" name="whiteTransparent"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="8i7-Jx-d3j"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JPP-rZ-YMw">
+                                <rect key="frame" x="8" y="8" width="10" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="whiteBackground"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" name="headerViolet"/>
+                        <constraints>
+                            <constraint firstItem="xBh-8c-6HP" firstAttribute="leading" secondItem="oaA-AU-ep4" secondAttribute="leading" constant="8" id="5cs-ho-QbD"/>
+                            <constraint firstAttribute="bottom" secondItem="iIk-8q-gvb" secondAttribute="bottom" constant="8" id="72O-gf-nHv"/>
+                            <constraint firstItem="JPP-rZ-YMw" firstAttribute="top" secondItem="oaA-AU-ep4" secondAttribute="top" constant="8" id="DVD-CA-ZuZ"/>
+                            <constraint firstAttribute="trailing" secondItem="VUr-dX-vdY" secondAttribute="trailing" id="KCY-p7-dTK"/>
+                            <constraint firstItem="VUr-dX-vdY" firstAttribute="leading" secondItem="oaA-AU-ep4" secondAttribute="leading" id="PQe-2a-1q8"/>
+                            <constraint firstItem="xBh-8c-6HP" firstAttribute="top" secondItem="JPP-rZ-YMw" secondAttribute="bottom" priority="700" constant="18" id="We4-kc-VMx"/>
+                            <constraint firstAttribute="bottom" secondItem="xBh-8c-6HP" secondAttribute="bottom" constant="3" id="XFt-eZ-29O"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JPP-rZ-YMw" secondAttribute="trailing" constant="8" id="bgs-7j-pNh"/>
+                            <constraint firstItem="iIk-8q-gvb" firstAttribute="top" secondItem="Prm-ib-hyx" secondAttribute="bottom" constant="4" id="eMi-n0-9Z8"/>
+                            <constraint firstItem="Prm-ib-hyx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xBh-8c-6HP" secondAttribute="trailing" constant="8" id="gLJ-08-saO"/>
+                            <constraint firstAttribute="bottom" secondItem="333-oa-lUX" secondAttribute="bottom" constant="4" id="jow-ts-kkr"/>
+                            <constraint firstAttribute="trailing" secondItem="iIk-8q-gvb" secondAttribute="trailing" constant="12" id="n03-Iz-dog"/>
+                            <constraint firstItem="xBh-8c-6HP" firstAttribute="top" secondItem="VUr-dX-vdY" secondAttribute="bottom" constant="12" id="paT-Ay-tug"/>
+                            <constraint firstItem="JPP-rZ-YMw" firstAttribute="leading" secondItem="oaA-AU-ep4" secondAttribute="leading" constant="8" id="r40-CV-UZq"/>
+                            <constraint firstItem="xBh-8c-6HP" firstAttribute="top" secondItem="oaA-AU-ep4" secondAttribute="top" priority="600" constant="12" id="riI-cq-zUj"/>
+                            <constraint firstItem="333-oa-lUX" firstAttribute="leading" secondItem="oaA-AU-ep4" secondAttribute="leading" constant="5" id="vb0-a1-xSu"/>
+                            <constraint firstAttribute="trailing" secondItem="Prm-ib-hyx" secondAttribute="trailing" constant="8" id="vpJ-1z-inn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="oaA-AU-ep4" firstAttribute="top" secondItem="lU1-kK-YHI" secondAttribute="top" constant="10" id="4Cv-IN-fcO"/>
+                    <constraint firstAttribute="trailing" secondItem="oaA-AU-ep4" secondAttribute="trailing" constant="20" id="8tI-Hw-XvU"/>
+                    <constraint firstItem="oaA-AU-ep4" firstAttribute="leading" secondItem="lU1-kK-YHI" secondAttribute="leading" constant="60" id="I2T-jr-h17"/>
+                    <constraint firstAttribute="bottom" secondItem="oaA-AU-ep4" secondAttribute="bottom" constant="10" id="fcL-8M-Ztk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="chatBackgroundView" destination="oaA-AU-ep4" id="p3m-Ub-H1V"/>
+                <outlet property="chatMessageTextView" destination="JPP-rZ-YMw" id="C9D-MB-KpG"/>
+                <outlet property="dividerView" destination="VUr-dX-vdY" id="lah-CZ-N9d"/>
+                <outlet property="editLabel" destination="6qL-w5-cVI" id="dLb-he-AK8"/>
+                <outlet property="fileNameLabel" destination="Prm-ib-hyx" id="IAO-ff-DQH"/>
+                <outlet property="messagDateLabel" destination="zo3-W7-EUj" id="JOY-Hb-G9f"/>
+                <outlet property="progressBar" destination="333-oa-lUX" id="9zG-Ua-vgx"/>
+                <outlet property="sentStateImageView" destination="zCh-bp-8LL" id="dND-to-ovP"/>
+                <outlet property="topConstraint" destination="riI-cq-zUj" id="aob-Rj-CjP"/>
+                <outlet property="voiceButton" destination="NfP-0b-Oez" id="BS7-BZ-e4h"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chat_voice_outcome_icon" width="14" height="14"/>
+        <image name="load_file_img" width="35" height="35"/>
+        <image name="sent_unread_icon" width="8.5" height="7"/>
+        <namedColor name="accentGreen">
+            <color red="0.55686274509803924" green="0.41960784313725491" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="headerViolet">
+            <color red="0.55686274509803924" green="0.41960784313725491" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="progressBarBackground">
+            <color red="0.80784313725490198" green="0.6588235294117647" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteTransparent">
+            <color red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

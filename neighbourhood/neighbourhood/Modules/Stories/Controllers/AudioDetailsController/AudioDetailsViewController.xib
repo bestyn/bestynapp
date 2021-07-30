@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioDetailsViewController" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="audioTrackView" destination="hMb-Io-1R7" id="hhy-wk-eeR"/>
+                <outlet property="emptyView" destination="rab-vv-mqN" id="SUl-D4-inP"/>
+                <outlet property="storiesCollectionView" destination="O2n-o7-KKa" id="Wgs-mz-hU1"/>
+                <outlet property="topView" destination="IBU-E7-Sss" id="kxm-cC-Hed"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IBU-E7-Sss">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLM-AN-ASd">
+                            <rect key="frame" x="0.0" y="44" width="414" height="54"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJN-kg-uGm">
+                                    <rect key="frame" x="10" y="10.5" width="40" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Swx-eG-VgX"/>
+                                        <constraint firstAttribute="width" constant="40" id="YQo-ET-MMs"/>
+                                    </constraints>
+                                    <state key="normal" image="left_arrow"/>
+                                    <connections>
+                                        <action selector="didTapBack:" destination="-1" eventType="touchUpInside" id="fNa-Ch-eXn"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio Track Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNG-5p-Z97">
+                                    <rect key="frame" x="135.5" y="15" width="143.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                    <color key="textColor" name="mainBlack"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="zJN-kg-uGm" firstAttribute="leading" secondItem="YLM-AN-ASd" secondAttribute="leading" constant="10" id="6Op-MK-dTu"/>
+                                <constraint firstAttribute="height" constant="54" id="IQe-Gl-gdq"/>
+                                <constraint firstItem="zJN-kg-uGm" firstAttribute="centerY" secondItem="yNG-5p-Z97" secondAttribute="centerY" id="KMJ-ZZ-6Nn"/>
+                                <constraint firstItem="yNG-5p-Z97" firstAttribute="centerX" secondItem="YLM-AN-ASd" secondAttribute="centerX" id="PZC-rn-EgZ"/>
+                                <constraint firstAttribute="bottom" secondItem="yNG-5p-Z97" secondAttribute="bottom" constant="18" id="pOq-hk-qIW"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMb-Io-1R7" customClass="AudioTrackView" customModule="Bestyn" customModuleProvider="target">
+                            <rect key="frame" x="20" y="110" width="374" height="58"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="58" id="d3N-NH-ADS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="sol-bt-BrN"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="YLM-AN-ASd" firstAttribute="top" secondItem="sol-bt-BrN" secondAttribute="top" id="1cB-lu-wKY"/>
+                        <constraint firstItem="hMb-Io-1R7" firstAttribute="leading" secondItem="IBU-E7-Sss" secondAttribute="leading" constant="20" id="80H-gn-E3N"/>
+                        <constraint firstAttribute="trailing" secondItem="YLM-AN-ASd" secondAttribute="trailing" id="BsG-ah-Pwc"/>
+                        <constraint firstAttribute="bottom" secondItem="hMb-Io-1R7" secondAttribute="bottom" constant="12" id="EdR-hq-LYz"/>
+                        <constraint firstAttribute="trailing" secondItem="hMb-Io-1R7" secondAttribute="trailing" constant="20" id="RkA-gN-7Ca"/>
+                        <constraint firstItem="hMb-Io-1R7" firstAttribute="top" secondItem="YLM-AN-ASd" secondAttribute="bottom" constant="12" id="k8k-CM-fpa"/>
+                        <constraint firstItem="YLM-AN-ASd" firstAttribute="leading" secondItem="IBU-E7-Sss" secondAttribute="leading" id="mbY-g2-4yI"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="O2n-o7-KKa">
+                    <rect key="frame" x="0.0" y="180" width="414" height="682"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iLA-4o-SXF">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="15" maxX="10" maxY="15"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="iEA-la-yKv"/>
+                        <outlet property="delegate" destination="-1" id="fA6-BK-TsN"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="greyBackground"/>
+            <constraints>
+                <constraint firstItem="O2n-o7-KKa" firstAttribute="top" secondItem="IBU-E7-Sss" secondAttribute="bottom" id="0zI-cg-mpM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O2n-o7-KKa" secondAttribute="trailing" id="HI3-pP-eL8"/>
+                <constraint firstItem="IBU-E7-Sss" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LNK-CY-H30"/>
+                <constraint firstItem="IBU-E7-Sss" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Zrg-b4-xH3"/>
+                <constraint firstItem="IBU-E7-Sss" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mr9-ox-eA1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="O2n-o7-KKa" secondAttribute="bottom" id="njk-sP-aUd"/>
+                <constraint firstItem="O2n-o7-KKa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="o6o-Pb-6Gq"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
+        </view>
+        <view hidden="YES" contentMode="scaleToFill" id="rab-vv-mqN">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Bdf-f9-JcY">
+                    <rect key="frame" x="101" y="111" width="212" height="211"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_empty_audio_stories" translatesAutoresizingMaskIntoConstraints="NO" id="DHa-0Q-ao2">
+                            <rect key="frame" x="21" y="0.0" width="170.5" height="156.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no stories with this audio track - be the first!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN6-De-oyT">
+                            <rect key="frame" x="5" y="171.5" width="202" height="39.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <color key="textColor" name="darkGrey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="212" id="v5E-mY-BJy"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="74a-lB-sZj"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Bdf-f9-JcY" firstAttribute="top" secondItem="74a-lB-sZj" secondAttribute="top" constant="67" id="Ttq-Th-RlT"/>
+                <constraint firstItem="Bdf-f9-JcY" firstAttribute="centerX" secondItem="rab-vv-mqN" secondAttribute="centerX" id="dC5-y2-wKL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-807" y="16"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_empty_audio_stories" width="170.5" height="156.5"/>
+        <image name="left_arrow" width="21" height="16"/>
+        <namedColor name="darkGrey">
+            <color red="0.4392156862745098" green="0.45098039215686275" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greyBackground">
+            <color red="0.93725490196078431" green="0.94509803921568625" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainBlack">
+            <color red="0.10196078431372549" green="0.062745098039215685" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

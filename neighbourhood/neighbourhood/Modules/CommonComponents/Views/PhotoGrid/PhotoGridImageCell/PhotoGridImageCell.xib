@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoGridImageCell" id="gTV-IL-0wX" customClass="PhotoGridImageCell" customModule="Bestyn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FqL-ZV-ZV2">
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8X6-dQ-gQl">
+                        <rect key="frame" x="95" y="0.0" width="30" height="30"/>
+                        <state key="normal" image="delete_image_icon"/>
+                        <connections>
+                            <action selector="didPressRemove:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Akp-zu-EEK"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="FqL-ZV-ZV2" secondAttribute="trailing" id="457-MF-v7R"/>
+                <constraint firstItem="8X6-dQ-gQl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="MJt-uo-mpg"/>
+                <constraint firstAttribute="trailing" secondItem="8X6-dQ-gQl" secondAttribute="trailing" id="TgM-wj-NLe"/>
+                <constraint firstAttribute="bottom" secondItem="FqL-ZV-ZV2" secondAttribute="bottom" id="bh5-lZ-nRE"/>
+                <constraint firstItem="FqL-ZV-ZV2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iQx-TF-SNG"/>
+                <constraint firstItem="FqL-ZV-ZV2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tkx-F5-OeY"/>
+            </constraints>
+            <size key="customSize" width="125" height="120"/>
+            <connections>
+                <outlet property="imageView" destination="FqL-ZV-ZV2" id="rQi-4p-Lnd"/>
+                <outlet property="removeButton" destination="8X6-dQ-gQl" id="bAm-m8-Exb"/>
+            </connections>
+            <point key="canvasLocation" x="173.18840579710147" y="97.098214285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="delete_image_icon" width="30" height="30"/>
+    </resources>
+</document>

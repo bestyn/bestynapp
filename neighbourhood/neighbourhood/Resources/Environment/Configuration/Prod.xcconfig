@@ -1,0 +1,13 @@
+//
+//  Live.xcconfig
+//  neighbourhood
+//
+//  Created by Dioksa on 22.04.2020.
+//  Copyright © 2020 GBKSoft. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+API_BASE_URL = https:/$()/api.bestyn.app/rest
+CENTRIFUGO_URL = wss:/$()/push.bestyn.app:8000/connection/websocket
+REVIEW_API_BASE_URL = https:/$()/live-bestyn-backend.ci.gbksoft.net/rest

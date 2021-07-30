@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateStoryViewController" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="actionsStackView" destination="TQJ-jw-f3S" id="yuX-lh-Lqg"/>
+                <outlet property="backButton" destination="Z5c-7y-68d" id="hdk-4O-k9o"/>
+                <outlet property="cameraView" destination="TYq-Hm-fsB" id="lpU-XO-IJ2"/>
+                <outlet property="durationButtonsStackView" destination="YeP-Pb-01P" id="ome-bB-bk6"/>
+                <outlet property="flashButton" destination="d8W-b4-gMD" id="azc-8a-jlz"/>
+                <outlet property="galleryButton" destination="dd9-7Y-yRF" id="q2D-Ve-9Ie"/>
+                <outlet property="loadingIndicator" destination="dlJ-dC-Ps0" id="2S0-HM-MvE"/>
+                <outlet property="recordButton" destination="1I7-Yk-Kr2" id="HaS-s2-zPH"/>
+                <outlet property="recordedActionsStackView" destination="Y80-lC-2uw" id="lsb-wE-sev"/>
+                <outlet property="recordsStackView" destination="osz-vd-o1i" id="8gr-UH-jnC"/>
+                <outlet property="textStoryButton" destination="qBf-7Q-a89" id="wt1-Y8-Ydb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="durationButtons" destination="mce-Bo-hBH" collectionClass="NSMutableArray" id="wyv-80-Q99"/>
+                <outletCollection property="durationButtons" destination="V9w-fp-xDf" collectionClass="NSMutableArray" id="wLO-LP-JnL"/>
+                <outletCollection property="durationButtons" destination="ch2-nq-JxY" collectionClass="NSMutableArray" id="63r-7R-L6c"/>
+                <outletCollection property="durationButtons" destination="rFy-3K-eni" collectionClass="NSMutableArray" id="Gf3-Kz-hec"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYq-Hm-fsB" customClass="VideoPreviewView" customModule="Bestyn" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" name="greyImage"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-wk-Q5r">
+                    <rect key="frame" x="19" y="54" width="376" height="3"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="osz-vd-o1i">
+                            <rect key="frame" x="0.0" y="0.0" width="376" height="3"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.10196078431372549" green="0.062745098039215685" blue="0.20784313725490197" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="osz-vd-o1i" firstAttribute="leading" secondItem="Dkc-wk-Q5r" secondAttribute="leading" id="58q-a2-vqe"/>
+                        <constraint firstAttribute="trailing" secondItem="osz-vd-o1i" secondAttribute="trailing" id="63d-si-QYl"/>
+                        <constraint firstAttribute="height" constant="3" id="D8C-aP-Urv"/>
+                        <constraint firstItem="osz-vd-o1i" firstAttribute="top" secondItem="Dkc-wk-Q5r" secondAttribute="top" id="YMZ-bV-8zc"/>
+                        <constraint firstAttribute="bottom" secondItem="osz-vd-o1i" secondAttribute="bottom" id="rjy-rB-QtM"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TQJ-jw-f3S">
+                    <rect key="frame" x="364" y="58" width="44" height="96"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99C-4a-MFJ">
+                            <rect key="frame" x="0.0" y="-48" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="4eb-6m-QXz"/>
+                                <constraint firstAttribute="height" constant="44" id="JHS-2y-B3G"/>
+                            </constraints>
+                            <state key="normal" image="stories_retime_icon"/>
+                            <connections>
+                                <action selector="didTapSpeed:" destination="-1" eventType="touchUpInside" id="zDC-OU-cib"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSc-yS-kh2">
+                            <rect key="frame" x="0.0" y="-48" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="7OO-dR-md9"/>
+                                <constraint firstAttribute="height" constant="44" id="s5Q-Gl-fXk"/>
+                            </constraints>
+                            <state key="normal" image="stories_filters_icon"/>
+                            <connections>
+                                <action selector="didTapFilters:" destination="-1" eventType="touchUpInside" id="CAq-Yx-XoQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8W-b4-gMD">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="iCq-aB-gJY"/>
+                                <constraint firstAttribute="height" constant="44" id="srN-uT-yfb"/>
+                            </constraints>
+                            <state key="normal" image="stories_flash_on_icon"/>
+                            <connections>
+                                <action selector="didTapFlashToggle:" destination="-1" eventType="touchUpInside" id="Vf2-lh-SYW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yL-uM-Hch">
+                            <rect key="frame" x="0.0" y="52" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="51B-4c-czF"/>
+                                <constraint firstAttribute="width" constant="44" id="my4-BQ-6nY"/>
+                            </constraints>
+                            <state key="normal" image="stories_camera_switch_icon"/>
+                            <connections>
+                                <action selector="didTapSwitchCamera:" destination="-1" eventType="touchUpInside" id="qxy-uN-UtV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pgZ-rU-8cE">
+                    <rect key="frame" x="50" y="718" width="314" height="134"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="YeP-Pb-01P">
+                            <rect key="frame" x="79" y="0.0" width="156" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mce-Bo-hBH" customClass="DoubleBorderedButton" customModule="Bestyn" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="nUl-lx-wh2"/>
+                                        <constraint firstAttribute="height" constant="30" id="rpU-FN-BVC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
+                                    <state key="normal" title="15s">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9w-fp-xDf" customClass="DoubleBorderedButton" customModule="Bestyn" customModuleProvider="target">
+                                    <rect key="frame" x="42" y="0.0" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="Bdh-Jz-0X5"/>
+                                        <constraint firstAttribute="height" constant="30" id="b6f-Jy-W9f"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
+                                    <state key="normal" title="30s">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-nq-JxY" customClass="DoubleBorderedButton" customModule="Bestyn" customModuleProvider="target">
+                                    <rect key="frame" x="84" y="0.0" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="1oz-c3-YN2"/>
+                                        <constraint firstAttribute="width" constant="30" id="obl-ew-4lb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
+                                    <state key="normal" title="45s">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFy-3K-eni" customClass="DoubleBorderedButton" customModule="Bestyn" customModuleProvider="target">
+                                    <rect key="frame" x="126" y="0.0" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="r6B-BJ-WJr"/>
+                                        <constraint firstAttribute="height" constant="30" id="sC1-Kc-5jw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
+                                    <state key="normal" title="60s">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v6g-Dv-bVs">
+                            <rect key="frame" x="0.0" y="60" width="314" height="74"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd9-7Y-yRF" customClass="DoubleBorderedButton" customModule="Bestyn" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="17" width="40" height="40"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="hrs-gQ-9Qc"/>
+                                        <constraint firstAttribute="height" constant="40" id="wEh-4g-Yao"/>
+                                    </constraints>
+                                    <state key="normal" image="stories_gallery_icon"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapGallery:" destination="-1" eventType="touchUpInside" id="0AU-IR-8yJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1I7-Yk-Kr2">
+                                    <rect key="frame" x="120" y="0.0" width="74" height="74"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="74" id="aYY-lL-95H"/>
+                                        <constraint firstAttribute="width" constant="74" id="hro-QK-5DX"/>
+                                    </constraints>
+                                    <state key="normal" image="stories_record_icon"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="37"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapToggleRecord:" destination="-1" eventType="touchUpInside" id="A2E-uw-Xc3"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBf-7Q-a89" customClass="DoubleBorderedButton" customModule="Bestyn" customModuleProvider="target">
+                                    <rect key="frame" x="274" y="17" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="lHq-cC-gEn"/>
+                                        <constraint firstAttribute="height" constant="40" id="o89-8X-u7W"/>
+                                    </constraints>
+                                    <state key="normal" image="stories_text_icon" backgroundImage="stories_text_bg"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapTextStory:" destination="-1" eventType="touchUpInside" id="G7u-5Z-w3v"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="v6g-Dv-bVs" firstAttribute="width" secondItem="pgZ-rU-8cE" secondAttribute="width" id="U6N-4f-vyd"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5c-7y-68d">
+                    <rect key="frame" x="10" y="63" width="40" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="4k6-32-ixz"/>
+                        <constraint firstAttribute="height" constant="30" id="Lki-o0-0Gh"/>
+                    </constraints>
+                    <state key="normal" image="stories_back_icon"/>
+                    <connections>
+                        <action selector="didTapBack:" destination="-1" eventType="touchUpInside" id="a7c-Ik-nM0"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Y80-lC-2uw">
+                    <rect key="frame" x="274" y="794.5" width="107" height="41"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67U-kJ-iSV">
+                            <rect key="frame" x="0.0" y="9.5" width="36" height="22"/>
+                            <state key="normal" image="stories_remove_video_icon"/>
+                            <connections>
+                                <action selector="didTapRemoveVideo:" destination="-1" eventType="touchUpInside" id="ZH4-kS-yGP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdb-F8-gOh">
+                            <rect key="frame" x="66" y="0.0" width="41" height="41"/>
+                            <state key="normal" image="stories_confirm_icon"/>
+                            <connections>
+                                <action selector="didTapConfirm:" destination="-1" eventType="touchUpInside" id="U4R-Wp-3sg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="dlJ-dC-Ps0">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                    <color key="color" name="blueButton"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Y80-lC-2uw" firstAttribute="leading" secondItem="1I7-Yk-Kr2" secondAttribute="trailing" constant="30" id="18N-WW-AxR"/>
+                <constraint firstItem="dlJ-dC-Ps0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bxd-td-NJQ"/>
+                <constraint firstItem="TYq-Hm-fsB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IhT-mD-hi8"/>
+                <constraint firstItem="TQJ-jw-f3S" firstAttribute="top" secondItem="Dkc-wk-Q5r" secondAttribute="bottom" constant="1" id="Jvn-tw-1JS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pgZ-rU-8cE" secondAttribute="bottom" constant="10" id="MOM-D2-dVB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pgZ-rU-8cE" secondAttribute="trailing" constant="50" id="Qbd-Lf-J2L"/>
+                <constraint firstItem="TYq-Hm-fsB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="QuO-b1-dXU"/>
+                <constraint firstItem="pgZ-rU-8cE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Rap-Zh-xuJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TQJ-jw-f3S" secondAttribute="trailing" constant="6" id="RbV-bp-318"/>
+                <constraint firstItem="Z5c-7y-68d" firstAttribute="top" secondItem="Dkc-wk-Q5r" secondAttribute="bottom" constant="6" id="Rs6-cR-8ou"/>
+                <constraint firstAttribute="bottom" secondItem="TYq-Hm-fsB" secondAttribute="bottom" id="TNy-yk-5Yz"/>
+                <constraint firstItem="Dkc-wk-Q5r" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="UCj-h4-eG1"/>
+                <constraint firstItem="Z5c-7y-68d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="ejc-AS-WCu"/>
+                <constraint firstItem="Dkc-wk-Q5r" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="hbW-og-x4c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dkc-wk-Q5r" secondAttribute="trailing" constant="19" id="pNf-tr-9V7"/>
+                <constraint firstItem="dlJ-dC-Ps0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pc9-nh-kwB"/>
+                <constraint firstItem="Y80-lC-2uw" firstAttribute="centerY" secondItem="v6g-Dv-bVs" secondAttribute="centerY" id="tOs-NM-mU0"/>
+                <constraint firstItem="TYq-Hm-fsB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xH9-6h-D3R"/>
+            </constraints>
+            <point key="canvasLocation" x="71.014492753623188" y="75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="stories_back_icon" width="21" height="16"/>
+        <image name="stories_camera_switch_icon" width="22" height="22"/>
+        <image name="stories_confirm_icon" width="41" height="41"/>
+        <image name="stories_filters_icon" width="24" height="23"/>
+        <image name="stories_flash_on_icon" width="20" height="26"/>
+        <image name="stories_gallery_icon" width="20" height="20"/>
+        <image name="stories_record_icon" width="45.5" height="45.5"/>
+        <image name="stories_remove_video_icon" width="36" height="20"/>
+        <image name="stories_retime_icon" width="23" height="20.5"/>
+        <image name="stories_text_bg" width="36" height="36"/>
+        <image name="stories_text_icon" width="18.5" height="12.5"/>
+        <namedColor name="blueButton">
+            <color red="0.46666666666666667" green="0.32549019607843138" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greyImage">
+            <color red="0.53725490196078429" green="0.61176470588235299" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

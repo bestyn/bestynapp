@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chatBackgroundLoadingCell" id="gTV-IL-0wX" customClass="ChatBackgroundLoadingCell" customModule="Bestyn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="343"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="343"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-Al-hnh">
+                        <rect key="frame" x="190.5" y="161.5" width="20" height="20"/>
+                        <color key="tintColor" name="accentGreen"/>
+                        <color key="color" name="accentGreen"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Hcz-Al-hnh" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="CrD-Nu-Qym"/>
+                <constraint firstItem="Hcz-Al-hnh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="qiM-sx-y16"/>
+            </constraints>
+            <size key="customSize" width="401" height="343"/>
+            <point key="canvasLocation" x="334.05797101449281" y="171.76339285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="accentGreen">
+            <color red="0.55686274509803924" green="0.41960784313725491" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gallerySelectedCell" id="gTV-IL-0wX" customClass="GallerySelectedCell" customModule="Bestyn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-9A-cH0">
+                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yVh-Fy-UTd">
+                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEk-eP-VFM">
+                                <rect key="frame" x="29" y="3" width="16" height="16"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.23999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="tOA-Mr-EhE"/>
+                                    <constraint firstAttribute="width" constant="16" id="z7m-5d-8oM"/>
+                                </constraints>
+                                <state key="normal" image="gallery_delete_icon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapRemove:" destination="gTV-IL-0wX" eventType="touchUpInside" id="qpH-nw-6c8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yVh-Fy-UTd" firstAttribute="top" secondItem="ixF-9A-cH0" secondAttribute="top" id="1hP-Ut-0Sm"/>
+                            <constraint firstAttribute="bottom" secondItem="yVh-Fy-UTd" secondAttribute="bottom" id="JdT-oW-2R6"/>
+                            <constraint firstItem="FEk-eP-VFM" firstAttribute="top" secondItem="ixF-9A-cH0" secondAttribute="top" constant="3" id="LEp-Tb-Ove"/>
+                            <constraint firstAttribute="trailing" secondItem="yVh-Fy-UTd" secondAttribute="trailing" id="Q5X-wS-FG4"/>
+                            <constraint firstAttribute="trailing" secondItem="FEk-eP-VFM" secondAttribute="trailing" constant="3" id="Wj1-yc-TDb"/>
+                            <constraint firstItem="yVh-Fy-UTd" firstAttribute="leading" secondItem="ixF-9A-cH0" secondAttribute="leading" id="xJd-4C-UWh"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ixF-9A-cH0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CL5-yT-bNH"/>
+                <constraint firstAttribute="bottom" secondItem="ixF-9A-cH0" secondAttribute="bottom" id="b2b-bc-iQs"/>
+                <constraint firstAttribute="trailing" secondItem="ixF-9A-cH0" secondAttribute="trailing" id="ejv-rX-7Le"/>
+                <constraint firstItem="ixF-9A-cH0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xJS-d4-zZe"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="yVh-Fy-UTd" id="Q1O-Hh-q0V"/>
+            </connections>
+            <point key="canvasLocation" x="-20.289855072463769" y="55.580357142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="gallery_delete_icon" width="8" height="8"/>
+    </resources>
+</document>

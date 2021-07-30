@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AvatarView" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImageView" destination="pY4-ii-QqB" id="1Tq-Kp-NLi"/>
+                <outlet property="avatarPlaceholderView" destination="H0Z-XF-mTh" id="mdK-tl-NBY"/>
+                <outlet property="initialsLabel" destination="D3I-2P-Ofl" id="GCW-Mq-Whu"/>
+                <outlet property="strokeImageView" destination="0C5-B9-8aF" id="I6Q-es-5xn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="134" height="134"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0Z-XF-mTh" customClass="RadialGradientView" customModule="Bestyn" customModuleProvider="target">
+                    <rect key="frame" x="4.5" y="4.5" width="125" height="125"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="insideColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="middleColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="outsideColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0C5-B9-8aF">
+                    <rect key="frame" x="0.0" y="0.0" width="134" height="134"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3I-2P-Ofl">
+                    <rect key="frame" x="10" y="29.5" width="114" height="75"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="64"/>
+                    <color key="textColor" name="whiteBackground"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pY4-ii-QqB">
+                    <rect key="frame" x="4.5" y="4.5" width="125" height="125"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0C5-B9-8aF" secondAttribute="bottom" id="17o-MO-ikt"/>
+                <constraint firstItem="D3I-2P-Ofl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4WR-zn-INs"/>
+                <constraint firstItem="pY4-ii-QqB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4jb-gM-l0T"/>
+                <constraint firstItem="pY4-ii-QqB" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.93" id="5hk-7m-NBm"/>
+                <constraint firstItem="H0Z-XF-mTh" firstAttribute="trailing" secondItem="pY4-ii-QqB" secondAttribute="trailing" id="7Ap-qY-vZ1"/>
+                <constraint firstItem="H0Z-XF-mTh" firstAttribute="bottom" secondItem="pY4-ii-QqB" secondAttribute="bottom" id="HhH-8V-POB"/>
+                <constraint firstItem="0C5-B9-8aF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KVf-mO-nad"/>
+                <constraint firstItem="pY4-ii-QqB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="NT7-sm-V56"/>
+                <constraint firstItem="H0Z-XF-mTh" firstAttribute="top" secondItem="pY4-ii-QqB" secondAttribute="top" id="QW9-Fc-nPd"/>
+                <constraint firstItem="0C5-B9-8aF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vdj-j2-MmG"/>
+                <constraint firstAttribute="trailing" secondItem="D3I-2P-Ofl" secondAttribute="trailing" constant="10" id="cSW-qr-6ex"/>
+                <constraint firstItem="D3I-2P-Ofl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dCt-PY-awT"/>
+                <constraint firstItem="H0Z-XF-mTh" firstAttribute="leading" secondItem="pY4-ii-QqB" secondAttribute="leading" id="fBi-QG-LCY"/>
+                <constraint firstAttribute="trailing" secondItem="0C5-B9-8aF" secondAttribute="trailing" id="gFh-5h-PTm"/>
+                <constraint firstItem="D3I-2P-Ofl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="iWb-3U-Hd0"/>
+                <constraint firstItem="pY4-ii-QqB" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.93" id="xsF-bk-Ife"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="121.0144927536232" y="-91.071428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="whiteBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryScrollView" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="categoryTitleButton" destination="FTF-LH-CtL" id="jBh-Rx-IhD"/>
+                <outlet property="scrollView" destination="Wub-8M-xGa" id="Zkg-J9-IxZ"/>
+                <outlet property="tagView" destination="n2t-IQ-GqM" id="YPj-jy-4cN"/>
+                <outlet property="tagViewWidthConstraint" destination="S9P-LP-cVz" id="PP5-AO-rG2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wub-8M-xGa">
+                    <rect key="frame" x="20" y="41" width="400" height="40"/>
+                    <subviews>
+                        <view contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="n2t-IQ-GqM" customClass="TagListView" customModule="TagListView">
+                            <rect key="frame" x="0.0" y="0.0" width="2000" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2000" id="S9P-LP-cVz"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                    <color key="value" name="accentBlue"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                    <color key="value" name="aliceBlue"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
+                                    <real key="value" value="9"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingX">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="marginX">
+                                    <real key="value" value="6"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="400" id="3Bh-Ue-kmk"/>
+                        <constraint firstItem="n2t-IQ-GqM" firstAttribute="height" secondItem="Wub-8M-xGa" secondAttribute="height" id="AOK-nC-t3i"/>
+                        <constraint firstItem="n2t-IQ-GqM" firstAttribute="top" secondItem="Wub-8M-xGa" secondAttribute="top" id="F5i-Sc-2Jc"/>
+                        <constraint firstAttribute="trailing" secondItem="n2t-IQ-GqM" secondAttribute="trailing" constant="20" id="GUX-w0-ej1"/>
+                        <constraint firstItem="n2t-IQ-GqM" firstAttribute="leading" secondItem="Wub-8M-xGa" secondAttribute="leading" id="JKf-wd-ZND"/>
+                        <constraint firstAttribute="bottom" secondItem="n2t-IQ-GqM" secondAttribute="bottom" id="RtG-Rj-raq"/>
+                        <constraint firstAttribute="height" constant="40" id="a05-bA-nuQ"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTF-LH-CtL">
+                    <rect key="frame" x="20" y="0.0" width="99" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="sir-un-aTf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                    <state key="normal" title="Category Name">
+                        <color key="titleColor" name="mainBlack"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Wub-8M-xGa" secondAttribute="bottom" constant="10" id="FS2-8k-pjI"/>
+                <constraint firstItem="FTF-LH-CtL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HGu-t8-wZt"/>
+                <constraint firstItem="Wub-8M-xGa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="VdA-rj-gRX"/>
+                <constraint firstItem="Wub-8M-xGa" firstAttribute="top" secondItem="FTF-LH-CtL" secondAttribute="bottom" constant="16" id="cea-fz-rNU"/>
+                <constraint firstItem="FTF-LH-CtL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="lbf-bO-9QI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="221.98660714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="accentBlue">
+            <color red="0.3843137254901961" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aliceBlue">
+            <color red="0.3843137254901961" green="0.0" blue="0.93333333333333335" alpha="0.079999998211860657" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainBlack">
+            <color red="0.10196078431372549" green="0.062745098039215685" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

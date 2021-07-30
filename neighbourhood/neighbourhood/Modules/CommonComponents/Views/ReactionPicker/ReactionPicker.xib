@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReactionPicker" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="FTd-hd-Hmz"/>
+                <outlet property="reactionsStackView" destination="dJS-sH-fwT" id="8ye-EP-8dF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="472" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dJS-sH-fwT">
+                    <rect key="frame" x="0.0" y="0.0" width="472" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsU-0k-7Yh">
+                            <rect key="frame" x="0.0" y="0.0" width="60.5" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="FsU-0k-7Yh" secondAttribute="height" multiplier="1:1" id="eQQ-gM-Kkj"/>
+                            </constraints>
+                            <state key="normal" image="reaction_like"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A11-vu-CqO">
+                            <rect key="frame" x="68.5" y="0.0" width="60.5" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="A11-vu-CqO" secondAttribute="height" multiplier="1:1" id="D1C-OW-iLh"/>
+                            </constraints>
+                            <state key="normal" image="reaction_love"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brm-Nf-w3h">
+                            <rect key="frame" x="137" y="0.0" width="60.5" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Brm-Nf-w3h" secondAttribute="height" multiplier="1:1" id="rFi-uf-g0z"/>
+                            </constraints>
+                            <state key="normal" image="reaction_laugh"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0N7-DV-z5t">
+                            <rect key="frame" x="205.5" y="0.0" width="61" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="0N7-DV-z5t" secondAttribute="height" multiplier="1:1" id="iGy-Ps-MYA"/>
+                            </constraints>
+                            <state key="normal" image="reaction_angry"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lg3-uP-HVL">
+                            <rect key="frame" x="274.5" y="0.0" width="60.5" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Lg3-uP-HVL" secondAttribute="height" multiplier="1:1" id="bRS-3k-ePK"/>
+                            </constraints>
+                            <state key="normal" image="reaction_sad"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCs-u7-9XE">
+                            <rect key="frame" x="343" y="0.0" width="60.5" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="PCs-u7-9XE" secondAttribute="height" multiplier="1:1" id="nRA-7Q-1vn"/>
+                            </constraints>
+                            <state key="normal" image="reaction_top"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVx-wI-Jju">
+                            <rect key="frame" x="411.5" y="0.0" width="60.5" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="DVx-wI-Jju" secondAttribute="height" multiplier="1:1" id="KhI-S1-dnK"/>
+                            </constraints>
+                            <state key="normal" image="reaction_trash"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Lg3-uP-HVL" firstAttribute="width" secondItem="Lg3-uP-HVL" secondAttribute="height" multiplier="1:1" id="Bjm-KJ-OJb"/>
+                        <constraint firstItem="DVx-wI-Jju" firstAttribute="width" secondItem="DVx-wI-Jju" secondAttribute="height" multiplier="1:1" id="TGM-DI-7Px"/>
+                        <constraint firstItem="0N7-DV-z5t" firstAttribute="width" secondItem="0N7-DV-z5t" secondAttribute="height" multiplier="1:1" id="UBU-Yr-5kr"/>
+                        <constraint firstItem="Brm-Nf-w3h" firstAttribute="width" secondItem="Brm-Nf-w3h" secondAttribute="height" multiplier="1:1" id="YZg-5N-LmH"/>
+                        <constraint firstItem="DVx-wI-Jju" firstAttribute="width" secondItem="DVx-wI-Jju" secondAttribute="height" multiplier="1:1" id="ePb-nC-8F9"/>
+                        <constraint firstItem="PCs-u7-9XE" firstAttribute="width" secondItem="PCs-u7-9XE" secondAttribute="height" multiplier="1:1" id="iYS-fD-PN6"/>
+                        <constraint firstItem="DVx-wI-Jju" firstAttribute="width" secondItem="DVx-wI-Jju" secondAttribute="height" multiplier="1:1" id="l7o-tU-nEZ"/>
+                        <constraint firstItem="Lg3-uP-HVL" firstAttribute="width" secondItem="Lg3-uP-HVL" secondAttribute="height" multiplier="1:1" id="uwm-WZ-oVE"/>
+                        <constraint firstItem="Brm-Nf-w3h" firstAttribute="width" secondItem="Brm-Nf-w3h" secondAttribute="height" multiplier="1:1" id="vOe-Zd-4kE"/>
+                        <constraint firstItem="FsU-0k-7Yh" firstAttribute="width" secondItem="FsU-0k-7Yh" secondAttribute="height" multiplier="1:1" id="vwo-pL-fJJ"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dJS-sH-fwT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ld4-iu-lJB"/>
+                <constraint firstAttribute="bottom" secondItem="dJS-sH-fwT" secondAttribute="bottom" id="WhV-PB-bvq"/>
+                <constraint firstAttribute="trailing" secondItem="dJS-sH-fwT" secondAttribute="trailing" id="ch3-ZK-N3P"/>
+                <constraint firstItem="dJS-sH-fwT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lny-k6-lZS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="0.0" y="112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="reaction_angry" width="44" height="44"/>
+        <image name="reaction_laugh" width="44" height="44"/>
+        <image name="reaction_like" width="44" height="44"/>
+        <image name="reaction_love" width="44" height="44"/>
+        <image name="reaction_sad" width="44" height="44"/>
+        <image name="reaction_top" width="44" height="44"/>
+        <image name="reaction_trash" width="44" height="44"/>
+    </resources>
+</document>

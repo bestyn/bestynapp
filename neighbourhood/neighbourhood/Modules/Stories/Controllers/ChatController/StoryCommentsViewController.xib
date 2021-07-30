@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoryCommentsViewController" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomViewConstraint" destination="sCe-id-Raa" id="taV-6N-C6v"/>
+                <outlet property="chatBottomConstraint" destination="kuh-9u-5YG" id="Th4-Rd-Bv0"/>
+                <outlet property="chatView" destination="VGm-X9-1Yf" id="9P9-5O-G37"/>
+                <outlet property="tableView" destination="ajk-Tr-keF" id="hp7-XP-JOC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jg1-bN-MGm">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGm-X9-1Yf" customClass="ChatTextFieldView" customModule="Bestyn" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="801" width="414" height="95"/>
+                            <color key="backgroundColor" name="whiteBackground"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKJ-Ne-wsC">
+                            <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-Tr-keF">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="801"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="A2e-mh-yP0"/>
+                                <outlet property="delegate" destination="-1" id="DT5-om-QUX"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="lWv-yf-k77"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="lWv-yf-k77" firstAttribute="trailing" secondItem="ajk-Tr-keF" secondAttribute="trailing" id="0ez-I7-Cl8"/>
+                        <constraint firstItem="VGm-X9-1Yf" firstAttribute="leading" secondItem="Jg1-bN-MGm" secondAttribute="leading" id="AhT-qd-GbO"/>
+                        <constraint firstItem="NKJ-Ne-wsC" firstAttribute="top" secondItem="VGm-X9-1Yf" secondAttribute="bottom" id="FUT-9O-CIJ"/>
+                        <constraint firstItem="NKJ-Ne-wsC" firstAttribute="leading" secondItem="Jg1-bN-MGm" secondAttribute="leading" id="V8P-ks-n7j"/>
+                        <constraint firstAttribute="trailing" secondItem="VGm-X9-1Yf" secondAttribute="trailing" id="Zoz-A2-NOF"/>
+                        <constraint firstAttribute="trailing" secondItem="NKJ-Ne-wsC" secondAttribute="trailing" id="aS7-nc-Sbf"/>
+                        <constraint firstItem="ajk-Tr-keF" firstAttribute="top" secondItem="Jg1-bN-MGm" secondAttribute="top" id="f35-FV-Im8"/>
+                        <constraint firstAttribute="bottom" secondItem="NKJ-Ne-wsC" secondAttribute="bottom" id="gMM-L1-fWU"/>
+                        <constraint firstItem="ajk-Tr-keF" firstAttribute="leading" secondItem="lWv-yf-k77" secondAttribute="leading" id="hPm-x9-jdY"/>
+                        <constraint firstItem="VGm-X9-1Yf" firstAttribute="top" secondItem="ajk-Tr-keF" secondAttribute="bottom" id="kuh-9u-5YG"/>
+                        <constraint firstItem="lWv-yf-k77" firstAttribute="bottom" secondItem="VGm-X9-1Yf" secondAttribute="bottom" id="sCe-id-Raa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Jg1-bN-MGm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0U6-g4-uub"/>
+                <constraint firstItem="Jg1-bN-MGm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cK5-Za-jrO"/>
+                <constraint firstAttribute="bottom" secondItem="Jg1-bN-MGm" secondAttribute="bottom" id="ksf-75-95g"/>
+                <constraint firstAttribute="trailing" secondItem="Jg1-bN-MGm" secondAttribute="trailing" id="lqW-6k-hFP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="72.991071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="whiteBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

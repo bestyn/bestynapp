@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PagingView" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonsStackView" destination="qyM-L4-BMd" id="zWy-bq-yEm"/>
+                <outlet property="scrollView" destination="iCi-qB-QJc" id="gye-C8-Q7e"/>
+                <outlet property="viewsStackView" destination="FPY-BM-MQh" id="oxQ-VC-SWz"/>
+                <outlet property="viewsStackViewWidthConstraint" destination="TTe-vh-8dG" id="7dx-yC-91K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="476"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIt-GT-v8J">
+                    <rect key="frame" x="0.0" y="53" width="414" height="1"/>
+                    <color key="backgroundColor" name="greyBackground"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="5te-Zx-n0f"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="X9M-ls-Wxd">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="476"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qyM-L4-BMd">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1I-cy-r2I" customClass="PagingButton" customModule="Bestyn" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="Frc-dT-uTj"/>
+                            </constraints>
+                        </stackView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCi-qB-QJc">
+                            <rect key="frame" x="0.0" y="78" width="414" height="398"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FPY-BM-MQh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="398"/>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="FPY-BM-MQh" firstAttribute="top" secondItem="6kd-4j-eId" secondAttribute="top" id="41P-As-01i"/>
+                                <constraint firstItem="FPY-BM-MQh" firstAttribute="leading" secondItem="6kd-4j-eId" secondAttribute="leading" id="8j6-Ev-pem"/>
+                                <constraint firstItem="FPY-BM-MQh" firstAttribute="height" secondItem="Qpb-Zu-hMb" secondAttribute="height" id="CuY-OV-849"/>
+                                <constraint firstItem="FPY-BM-MQh" firstAttribute="bottom" secondItem="6kd-4j-eId" secondAttribute="bottom" id="OgW-iD-4Hy"/>
+                                <constraint firstItem="FPY-BM-MQh" firstAttribute="width" secondItem="Qpb-Zu-hMb" secondAttribute="width" id="TTe-vh-8dG"/>
+                                <constraint firstItem="FPY-BM-MQh" firstAttribute="trailing" secondItem="6kd-4j-eId" secondAttribute="trailing" id="Web-PR-BfG"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="6kd-4j-eId"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="Qpb-Zu-hMb"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="HDC-rH-W2m"/>
+                            </connections>
+                        </scrollView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="X9M-ls-Wxd" secondAttribute="bottom" id="BRF-GB-Ft4"/>
+                <constraint firstAttribute="trailing" secondItem="X9M-ls-Wxd" secondAttribute="trailing" id="DbS-yR-dxg"/>
+                <constraint firstItem="gIt-GT-v8J" firstAttribute="bottom" secondItem="qyM-L4-BMd" secondAttribute="bottom" id="GYx-Ft-0Qg"/>
+                <constraint firstItem="gIt-GT-v8J" firstAttribute="trailing" secondItem="X9M-ls-Wxd" secondAttribute="trailing" id="GsD-Ze-bnP"/>
+                <constraint firstItem="gIt-GT-v8J" firstAttribute="leading" secondItem="X9M-ls-Wxd" secondAttribute="leading" id="Rv3-GA-42l"/>
+                <constraint firstItem="X9M-ls-Wxd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="koG-mw-Pdr"/>
+                <constraint firstItem="X9M-ls-Wxd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wBB-99-SOn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="27.536231884057973" y="486.16071428571428"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="X1I-cy-r2I">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="greyBackground">
+            <color red="0.93725490196078431" green="0.94509803921568625" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

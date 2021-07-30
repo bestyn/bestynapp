@@ -1,0 +1,70 @@
+platform :ios, '11.0'
+use_frameworks!
+
+# Pods for neighbourhood
+
+def firebasePods
+  pod 'Firebase/Core', '~> 6.21'
+  pod 'Firebase/Analytics', '~> 6.21'
+  pod 'Firebase/Messaging', '~> 6.21'
+  pod 'Firebase/DynamicLinks', '~> 6.21'
+  pod 'Firebase/Crashlytics', '~> 6.21'
+  pod 'Firebase/Database', '~> 6.21'
+end
+
+def gbkPods
+  pod 'GBKRouterProtocol', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbkrouterprotocol.git'
+  pod 'GBKSoftTextField', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbksofttextfield.git'
+  pod 'GBKSoftRestManager', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbksoftrestmanager.git', :tag => '0.0.8'
+#  pod 'GBKSoftRestManager', :path => '/Users/user/Projects/GBKSoftRestManager'
+end
+
+def uiPods
+  pod 'Toast-Swift', '~> 5.0.1'
+  pod 'Floaty', '~> 4.2.0'
+  pod 'TagListView', '~> 1.4.0'
+  pod 'Kingfisher'
+  pod 'ExpandableLabel'
+  pod 'Keyboard+LayoutGuide', '~> 1.6.0'
+  pod 'MBCircularProgressBar', '~> 0.3.5'
+  pod 'FaveButton'
+  pod "SoundWave"
+  pod 'GSPlayer'
+end
+
+def googleAPI
+  pod 'GoogleMaps', '~> 3.3'
+  pod 'GooglePlaces', '~> 3.3'
+  pod 'Google-Maps-iOS-Utils', '3.1.4'
+  pod 'GoogleTagManager', '~> 7.1.3'
+end
+
+def globalPods
+  pod 'R.swift', '~> 5.1.0'
+  pod 'AppSpectorSDK', '~> 1.2.6'
+  pod 'DeviceKit', '~> 3.2.0'
+  pod 'SwiftCentrifuge', '~> 0.0.6'
+  pod 'OpenSSL-Universal'
+  pod 'ReachabilitySwift'
+end
+
+def allPods
+  firebasePods
+  gbkPods
+  uiPods
+  googleAPI
+  globalPods
+end
+
+target 'neighbourhood' do
+  allPods
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+      config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf'
+    end
+  end
+end

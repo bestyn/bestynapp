@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoriesListViewController" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="NVO-dN-rhU" id="fSh-6r-1I6"/>
+                <outlet property="emptyButton" destination="pXI-xl-svf" id="gZz-M6-6fv"/>
+                <outlet property="emptyLabel" destination="8RB-Xq-1IN" id="ha9-lE-lvs"/>
+                <outlet property="emptyView" destination="Hib-eu-Jtm" id="cew-t7-R8r"/>
+                <outlet property="storiesTableView" destination="yyB-pr-bNB" id="2x5-cZ-RsQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hib-eu-Jtm">
+                    <rect key="frame" x="70" y="184" width="274" height="253"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stories_empty_img" translatesAutoresizingMaskIntoConstraints="NO" id="MLo-bJ-2dU">
+                            <rect key="frame" x="52" y="0.0" width="170.5" height="156.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RB-Xq-1IN">
+                            <rect key="frame" x="120" y="176.5" width="34.5" height="16.5"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXI-xl-svf" customClass="LightButton" customModule="Bestyn" customModuleProvider="target">
+                            <rect key="frame" x="47" y="213" width="180" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="5ad-EV-yuV"/>
+                                <constraint firstAttribute="width" constant="180" id="ZLK-IE-kfa"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapCreateStory:" destination="-1" eventType="touchUpInside" id="mrP-4f-rVS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyB-pr-bNB">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hJR-7Y-nH8"/>
+                        <outlet property="delegate" destination="-1" id="Bgw-uf-1hu"/>
+                    </connections>
+                </tableView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVO-dN-rhU">
+                    <rect key="frame" x="10" y="59" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="glc-S4-Puy"/>
+                        <constraint firstAttribute="width" constant="40" id="lQn-8x-fap"/>
+                    </constraints>
+                    <state key="normal" image="arrow_white"/>
+                    <connections>
+                        <action selector="didTapBack:" destination="-1" eventType="touchUpInside" id="EzT-1F-jqX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="blueButton"/>
+            <constraints>
+                <constraint firstItem="yyB-pr-bNB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2cs-Ev-69U"/>
+                <constraint firstItem="NVO-dN-rhU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="9ST-PP-h0o"/>
+                <constraint firstItem="Hib-eu-Jtm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="CR4-SS-YJe"/>
+                <constraint firstItem="yyB-pr-bNB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GgH-z9-xAW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hib-eu-Jtm" secondAttribute="trailing" constant="70" id="XMh-7U-vP5"/>
+                <constraint firstItem="NVO-dN-rhU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Yul-4U-Y6m"/>
+                <constraint firstAttribute="bottom" secondItem="yyB-pr-bNB" secondAttribute="bottom" id="ema-Mb-hWj"/>
+                <constraint firstItem="Hib-eu-Jtm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="140" id="hJ6-KB-J0m"/>
+                <constraint firstAttribute="trailing" secondItem="yyB-pr-bNB" secondAttribute="trailing" id="m44-7n-ACx"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="pXI-xl-svf">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="arrow_white" width="21" height="16"/>
+        <image name="stories_empty_img" width="170.5" height="156.5"/>
+        <namedColor name="blueButton">
+            <color red="0.46666666666666667" green="0.32549019607843138" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

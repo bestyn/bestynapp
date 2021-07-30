@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessProfileCell" id="KGk-i7-Jjw" customClass="BusinessProfileCell" customModule="Bestyn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5id-NX-0JW" customClass="MediumAvatarView" customModule="Bestyn" customModuleProvider="target">
+                        <rect key="frame" x="20" y="23" width="42" height="42"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="ICJ-AX-zBs"/>
+                            <constraint firstAttribute="height" constant="42" id="dVU-KB-M3Z"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="8wT-Sg-wFT">
+                        <rect key="frame" x="79" y="-32.5" width="193" height="153"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0l-Cq-aX9">
+                                <rect key="frame" x="0.0" y="0.0" width="193" height="51"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
+                                <color key="textColor" name="greyMedium"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yq8-38-3Wg">
+                                <rect key="frame" x="0.0" y="52" width="193" height="50"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                <color key="textColor" name="mainBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22v-oC-m8a">
+                                <rect key="frame" x="0.0" y="103" width="193" height="50"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                <color key="textColor" name="grafit"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ML2-xM-3AY" userLabel="Unread View">
+                        <rect key="frame" x="290" y="39" width="10" height="10"/>
+                        <color key="backgroundColor" red="1" green="0.36078431372549019" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="6R7-iC-iC8"/>
+                            <constraint firstAttribute="width" constant="10" id="l37-Tu-MdQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5id-NX-0JW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="JuJ-t1-eu5"/>
+                    <constraint firstAttribute="trailing" secondItem="ML2-xM-3AY" secondAttribute="trailing" constant="20" id="Mnk-WT-ef0"/>
+                    <constraint firstItem="ML2-xM-3AY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bjd-XU-dWM"/>
+                    <constraint firstItem="ML2-xM-3AY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8wT-Sg-wFT" secondAttribute="trailing" constant="4" id="fjB-DF-2xh"/>
+                    <constraint firstItem="8wT-Sg-wFT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ojn-Hn-5DN"/>
+                    <constraint firstItem="5id-NX-0JW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wDG-yw-pg3"/>
+                    <constraint firstItem="5id-NX-0JW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zER-cb-oNS"/>
+                    <constraint firstItem="8wT-Sg-wFT" firstAttribute="leading" secondItem="5id-NX-0JW" secondAttribute="trailing" constant="17" id="zro-VW-fcn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabel" destination="22v-oC-m8a" id="reD-Jk-0Be"/>
+                <outlet property="avatarView" destination="5id-NX-0JW" id="2jv-by-MOd"/>
+                <outlet property="businessAccountTitleLabel" destination="I0l-Cq-aX9" id="DPv-dE-Lgj"/>
+                <outlet property="unreadView" destination="ML2-xM-3AY" id="ic9-TS-7dN"/>
+                <outlet property="userNameLabel" destination="Yq8-38-3Wg" id="4mp-SP-Ed3"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="grafit">
+            <color red="0.41600000858306885" green="0.46700000762939453" blue="0.56499999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greyMedium">
+            <color red="0.61960784313725492" green="0.63137254901960782" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainBlack">
+            <color red="0.10196078431372549" green="0.062745098039215685" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

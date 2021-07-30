@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AvatarEditViewController" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="maskedImageView" destination="1XP-Ti-eON" id="sFX-OY-rcd"/>
+                <outlet property="saveButton" destination="CNX-6t-dPX" id="qM3-iU-eMh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNX-6t-dPX" customClass="DarkButton" customModule="Bestyn" customModuleProvider="target">
+                    <rect key="frame" x="147" y="816" width="120" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="ehs-pH-U4H"/>
+                        <constraint firstAttribute="height" constant="40" id="jmB-Qc-imH"/>
+                    </constraints>
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="didTapSave:" destination="-1" eventType="touchUpInside" id="6t3-ma-0YF"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="1XP-Ti-eON" customClass="MaskedImageView" customModule="Bestyn" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="92" width="414" height="694"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maskHorizontalPadding">
+                            <real key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maskProportions">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskRounded" value="NO"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egb-gB-rJh">
+                    <rect key="frame" x="364" y="44" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="LSq-2J-sGC"/>
+                        <constraint firstAttribute="height" constant="40" id="POX-gJ-bva"/>
+                    </constraints>
+                    <state key="normal" image="close_screen_button"/>
+                    <connections>
+                        <action selector="closeButtonDidTap:" destination="-1" eventType="touchUpInside" id="9ed-QM-y0T"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="egb-gB-rJh" secondAttribute="trailing" constant="10" id="BQW-Nu-6z7"/>
+                <constraint firstAttribute="bottom" secondItem="CNX-6t-dPX" secondAttribute="bottom" constant="40" id="CIr-fz-7P2"/>
+                <constraint firstItem="1XP-Ti-eON" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="P8B-dM-vUJ"/>
+                <constraint firstItem="CNX-6t-dPX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cfu-PL-KyN"/>
+                <constraint firstItem="1XP-Ti-eON" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eTS-J4-9Jd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1XP-Ti-eON" secondAttribute="trailing" id="oBe-w4-MjT"/>
+                <constraint firstItem="CNX-6t-dPX" firstAttribute="top" secondItem="1XP-Ti-eON" secondAttribute="bottom" constant="30" id="ueL-g6-Fm0"/>
+                <constraint firstItem="egb-gB-rJh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yVv-2v-JAN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="133" y="125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_screen_button" width="16" height="16"/>
+        <namedColor name="Background">
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

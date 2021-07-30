@@ -1,0 +1,311 @@
+PODS:
+  - AppSpectorSDK (1.2.10)
+  - DeviceKit (3.2.0)
+  - ExpandableLabel (0.5.2)
+  - FaveButton (3.2.1)
+  - Firebase/Analytics (6.32.2):
+    - Firebase/Core
+  - Firebase/Core (6.32.2):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 6.8.2)
+  - Firebase/CoreOnly (6.32.2):
+    - FirebaseCore (= 6.10.2)
+  - Firebase/Crashlytics (6.32.2):
+    - Firebase/CoreOnly
+    - FirebaseCrashlytics (~> 4.6.0)
+  - Firebase/Database (6.32.2):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 6.6.0)
+  - Firebase/DynamicLinks (6.32.2):
+    - Firebase/CoreOnly
+    - FirebaseDynamicLinks (~> 4.3.0)
+  - Firebase/Messaging (6.32.2):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 4.6.2)
+  - FirebaseAnalytics (6.8.2):
+    - FirebaseCore (~> 6.10)
+    - FirebaseInstallations (~> 1.6)
+    - GoogleAppMeasurement (= 6.8.2)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/MethodSwizzler (~> 6.7)
+    - GoogleUtilities/Network (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+    - nanopb (~> 1.30906.0)
+  - FirebaseCore (6.10.2):
+    - FirebaseCoreDiagnostics (~> 1.6)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Logger (~> 6.7)
+  - FirebaseCoreDiagnostics (1.6.0):
+    - GoogleDataTransport (~> 7.2)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Logger (~> 6.7)
+    - nanopb (~> 1.30906.0)
+  - FirebaseCrashlytics (4.6.0):
+    - FirebaseCore (~> 6.10)
+    - FirebaseInstallations (~> 1.6)
+    - GoogleDataTransport (~> 7.2)
+    - nanopb (~> 1.30906.0)
+    - PromisesObjC (~> 1.2)
+  - FirebaseDatabase (6.6.0):
+    - FirebaseCore (~> 6.10)
+    - leveldb-library (~> 1.22)
+  - FirebaseDynamicLinks (4.3.0):
+    - FirebaseCore (~> 6.10)
+  - FirebaseInstallations (1.7.0):
+    - FirebaseCore (~> 6.10)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/UserDefaults (~> 6.7)
+    - PromisesObjC (~> 1.2)
+  - FirebaseInstanceID (4.6.0):
+    - FirebaseCore (~> 6.10)
+    - FirebaseInstallations (~> 1.6)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/UserDefaults (~> 6.7)
+  - FirebaseMessaging (4.6.2):
+    - FirebaseCore (~> 6.10)
+    - FirebaseInstanceID (~> 4.6)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Reachability (~> 6.7)
+    - GoogleUtilities/UserDefaults (~> 6.7)
+    - Protobuf (>= 3.9.2, ~> 3.9)
+  - Floaty (4.2.0)
+  - GBKRouterProtocol (0.3)
+  - GBKSoftRestManager (0.0.8)
+  - GBKSoftTextField (0.0.7)
+  - Google-Maps-iOS-Utils (3.1.4):
+    - Google-Maps-iOS-Utils/Clustering (= 3.1.4)
+    - Google-Maps-iOS-Utils/Geometry (= 3.1.4)
+    - Google-Maps-iOS-Utils/Heatmap (= 3.1.4)
+    - Google-Maps-iOS-Utils/QuadTree (= 3.1.4)
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Clustering (3.1.4):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Geometry (3.1.4):
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Heatmap (3.1.4):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/QuadTree (3.1.4):
+    - GoogleMaps
+  - GoogleAnalytics (3.17.0)
+  - GoogleAppMeasurement (6.8.2):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/MethodSwizzler (~> 6.7)
+    - GoogleUtilities/Network (~> 6.7)
+    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+    - nanopb (~> 1.30906.0)
+  - GoogleDataTransport (7.3.0):
+    - nanopb (~> 1.30906.0)
+  - GoogleMaps (3.10.0):
+    - GoogleMaps/Maps (= 3.10.0)
+  - GoogleMaps/Base (3.10.0)
+  - GoogleMaps/Maps (3.10.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.10.0):
+    - GoogleMaps/Base (= 3.10.0)
+  - GoogleSymbolUtilities (1.1.2)
+  - GoogleTagManager (7.1.4):
+    - FirebaseAnalytics (~> 6.7)
+    - GoogleAnalytics (~> 3.17)
+    - GoogleUtilitiesLegacy (~> 1.3)
+  - GoogleUtilities/AppDelegateSwizzler (6.7.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.7.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (6.7.2):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.7.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.7.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.7.2)"
+  - GoogleUtilities/Reachability (6.7.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (6.7.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilitiesLegacy (1.3.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GSPlayer (0.2.25)
+  - "Keyboard+LayoutGuide (1.6.0)"
+  - Kingfisher (5.15.0):
+    - Kingfisher/Core (= 5.15.0)
+  - Kingfisher/Core (5.15.0)
+  - leveldb-library (1.22)
+  - MBCircularProgressBar (0.3.5)
+  - nanopb (1.30906.0):
+    - nanopb/decode (= 1.30906.0)
+    - nanopb/encode (= 1.30906.0)
+  - nanopb/decode (1.30906.0)
+  - nanopb/encode (1.30906.0)
+  - OpenSSL-Universal (1.0.2.20):
+    - OpenSSL-Universal/Static (= 1.0.2.20)
+  - OpenSSL-Universal/Static (1.0.2.20)
+  - PromisesObjC (1.2.10)
+  - Protobuf (3.13.0)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+  - ReachabilitySwift (5.0.0)
+  - SoundWave (0.1.4)
+  - Starscream (3.1.1)
+  - SwiftCentrifuge (0.0.6):
+    - Starscream (~> 3)
+    - SwiftProtobuf
+  - SwiftProtobuf (1.12.0)
+  - TagListView (1.4.1)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - AppSpectorSDK (~> 1.2.6)
+  - DeviceKit (~> 3.2.0)
+  - ExpandableLabel
+  - FaveButton
+  - Firebase/Analytics (~> 6.21)
+  - Firebase/Core (~> 6.21)
+  - Firebase/Crashlytics (~> 6.21)
+  - Firebase/Database (~> 6.21)
+  - Firebase/DynamicLinks (~> 6.21)
+  - Firebase/Messaging (~> 6.21)
+  - Floaty (~> 4.2.0)
+  - "GBKRouterProtocol (from `git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbkrouterprotocol.git`)"
+  - "GBKSoftRestManager (from `git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbksoftrestmanager.git`, tag `0.0.8`)"
+  - "GBKSoftTextField (from `git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbksofttextfield.git`)"
+  - Google-Maps-iOS-Utils (= 3.1.4)
+  - GoogleMaps (~> 3.3)
+  - GooglePlaces (~> 3.3)
+  - GoogleTagManager (~> 7.1.3)
+  - GSPlayer
+  - "Keyboard+LayoutGuide (~> 1.6.0)"
+  - Kingfisher
+  - MBCircularProgressBar (~> 0.3.5)
+  - OpenSSL-Universal
+  - R.swift (~> 5.1.0)
+  - ReachabilitySwift
+  - SoundWave
+  - SwiftCentrifuge (~> 0.0.6)
+  - TagListView (~> 1.4.0)
+  - Toast-Swift (~> 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - AppSpectorSDK
+    - DeviceKit
+    - ExpandableLabel
+    - FaveButton
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCrashlytics
+    - FirebaseDatabase
+    - FirebaseDynamicLinks
+    - FirebaseInstallations
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - Floaty
+    - Google-Maps-iOS-Utils
+    - GoogleAnalytics
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleMaps
+    - GooglePlaces
+    - GoogleSymbolUtilities
+    - GoogleTagManager
+    - GoogleUtilities
+    - GoogleUtilitiesLegacy
+    - GSPlayer
+    - "Keyboard+LayoutGuide"
+    - Kingfisher
+    - leveldb-library
+    - MBCircularProgressBar
+    - nanopb
+    - OpenSSL-Universal
+    - PromisesObjC
+    - Protobuf
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
+    - SoundWave
+    - Starscream
+    - SwiftCentrifuge
+    - SwiftProtobuf
+    - TagListView
+    - Toast-Swift
+
+EXTERNAL SOURCES:
+  GBKRouterProtocol:
+    :git: "git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbkrouterprotocol.git"
+  GBKSoftRestManager:
+    :git: "git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbksoftrestmanager.git"
+    :tag: 0.0.8
+  GBKSoftTextField:
+    :git: "git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbksofttextfield.git"
+
+CHECKOUT OPTIONS:
+  GBKRouterProtocol:
+    :commit: f753f8eb78610e35eeae3513c13961347eceb32e
+    :git: "git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbkrouterprotocol.git"
+  GBKSoftRestManager:
+    :git: "git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbksoftrestmanager.git"
+    :tag: 0.0.8
+  GBKSoftTextField:
+    :commit: afdaccd3b87dfcd9b92869ac04a46d151f86d913
+    :git: "git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbksofttextfield.git"
+
+SPEC CHECKSUMS:
+  AppSpectorSDK: 6ad5a5871e4bc6903b5c361533c7a9fac8677ac6
+  DeviceKit: d081659419cce07c0b5239dbc9fb39ed7413c7fe
+  ExpandableLabel: c2fab6d27860c572d67134b30522a5917746171d
+  FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
+  Firebase: 47176280bfba198e531f909cfb1612dad216cb96
+  FirebaseAnalytics: 3c2fee6a922023ccfda7af87e4e641bad1fc11ba
+  FirebaseCore: 1d697bb944bf2af5fc248f1a66e165c9dd88bf97
+  FirebaseCoreDiagnostics: 7415bfb3883b3500c5a95c42b6ba66baae78f600
+  FirebaseCrashlytics: eea40d2a33f01b927b9f6f00ef305baa22a6a58e
+  FirebaseDatabase: 13a865a4b85897462b930eb683bda8f52583713f
+  FirebaseDynamicLinks: bab0682388b983f9b0044a1fb555606ddb0e9b7e
+  FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
+  FirebaseInstanceID: 84f5f5762f1bee94ca2254f693bbf5aec6666504
+  FirebaseMessaging: 82d75b3770a78bbce470769a6980429608b4c407
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
+  GBKRouterProtocol: 1d25f8b7baedbbace1915d6981824ba0500a4f3a
+  GBKSoftRestManager: a5d865a163e3689a683312f1f76dd3745203cf08
+  GBKSoftTextField: a067741dc1a45caf3f019a237a1da502e6b11b7f
+  Google-Maps-iOS-Utils: 1e51ca272b4f4befdf3577bf46f58c22ef22062c
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
+  GoogleAppMeasurement: 1a66f478c68ecd6c16ee63ee60c7c3a648e6b337
+  GoogleDataTransport: e85fb700c9b027079ce182c3d08e12e0f9618bb4
+  GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
+  GooglePlaces: 9a6f5f3a0c88da2aa1bf7426a65d3e004f5e69a1
+  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
+  GoogleTagManager: 9e7aa92603b3101fcc86f761c927ddd6f4c26c0e
+  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  GoogleUtilitiesLegacy: 5501bedec1646bd284286eb5fc9453f7e23a12f4
+  GSPlayer: 3b6850a0f26af54967396d637c2e4646dc451013
+  "Keyboard+LayoutGuide": db44b1764e2bb5d9824cc9cea9d9006cd4442045
+  Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
+  leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
+  PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SoundWave: d98ffaa863570b29d991da32a09b7ce1b4aaf2d4
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  SwiftCentrifuge: 7d05b11b7da8fdeb1919a1d19aa265ea12d4d727
+  SwiftProtobuf: 4ef85479c18ca85b5482b343df9c319c62bda699
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 6f0d324959c6712fadad51129111a076e75c7942
+
+COCOAPODS: 1.9.3

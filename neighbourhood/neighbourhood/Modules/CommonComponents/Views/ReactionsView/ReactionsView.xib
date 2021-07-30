@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReactionsView" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="countLabel" destination="BUC-GZ-nog" id="Cyf-Hf-fjj"/>
+                <outlet property="reactionsStackView" destination="kyJ-Qm-kLw" id="2bX-8u-4h0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="68" height="20"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ONE-Dr-qiv">
+                    <rect key="frame" x="0.0" y="0.0" width="68" height="20"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="kyJ-Qm-kLw">
+                            <rect key="frame" x="0.0" y="0.0" width="49.5" height="20"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="reaction_like" translatesAutoresizingMaskIntoConstraints="NO" id="Ywk-iX-Nal">
+                                    <rect key="frame" x="0.0" y="0.0" width="23" height="20"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="reaction_love" translatesAutoresizingMaskIntoConstraints="NO" id="gIy-xJ-2tl">
+                                    <rect key="frame" x="13" y="0.0" width="23.5" height="20"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="reaction_laugh" translatesAutoresizingMaskIntoConstraints="NO" id="Rym-HS-Izw">
+                                    <rect key="frame" x="26.5" y="0.0" width="23" height="20"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUC-GZ-nog">
+                            <rect key="frame" x="53.5" y="0.0" width="14.5" height="20"/>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
+                            <color key="textColor" name="mainBlack"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ONE-Dr-qiv" secondAttribute="bottom" id="4cF-tv-vZJ"/>
+                <constraint firstAttribute="trailing" secondItem="ONE-Dr-qiv" secondAttribute="trailing" id="8A2-iX-T3q"/>
+                <constraint firstItem="ONE-Dr-qiv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cYz-Od-jH5"/>
+                <constraint firstItem="ONE-Dr-qiv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mMp-cE-ULo"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="86.956521739130437" y="102.12053571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="reaction_laugh" width="44" height="44"/>
+        <image name="reaction_like" width="44" height="44"/>
+        <image name="reaction_love" width="44" height="44"/>
+        <namedColor name="mainBlack">
+            <color red="0.10196078431372549" green="0.062745098039215685" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

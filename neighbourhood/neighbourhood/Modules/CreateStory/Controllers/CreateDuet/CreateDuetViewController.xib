@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateDuetViewController" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="actionsStackView" destination="pQM-g9-ibd" id="s1n-kf-1mB"/>
+                <outlet property="backButton" destination="fk5-QK-iL5" id="Sul-R9-8qB"/>
+                <outlet property="cameraView" destination="5vl-0h-c4e" id="yBi-YZ-jPg"/>
+                <outlet property="flashButton" destination="rmw-jz-lZd" id="eQ8-py-MiK"/>
+                <outlet property="micButton" destination="6hE-zE-bJB" id="NNx-BC-Mpo"/>
+                <outlet property="originalStoryView" destination="2nQ-k0-B2z" id="w9V-qj-JDP"/>
+                <outlet property="recordButton" destination="7Sr-QD-tEV" id="oe4-tj-2EX"/>
+                <outlet property="recordedActionsStackView" destination="2dt-87-35M" id="ZEH-lg-aUT"/>
+                <outlet property="recordsStackView" destination="D8L-Tk-Esk" id="cQM-1Q-etz"/>
+                <outlet property="switchCamButton" destination="sVq-2Z-wpB" id="2Oy-6R-hyB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zi5-co-VAn">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nQ-k0-B2z">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vl-0h-c4e" customClass="VideoPreviewView" customModule="Bestyn" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pQM-g9-ibd">
+                    <rect key="frame" x="364" y="58" width="44" height="148"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Iq-Ky-4yl">
+                            <rect key="frame" x="0.0" y="-48" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="bk7-EG-IBr"/>
+                                <constraint firstAttribute="height" constant="44" id="hx4-AK-3ej"/>
+                            </constraints>
+                            <state key="normal" image="stories_filters_icon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmw-jz-lZd">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="aH1-wD-oqb"/>
+                                <constraint firstAttribute="height" constant="44" id="dJp-34-L5M"/>
+                            </constraints>
+                            <state key="normal" image="stories_flash_on_icon"/>
+                            <connections>
+                                <action selector="didTapFlashToggle:" destination="-1" eventType="touchUpInside" id="Whe-OP-T4l"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hE-zE-bJB">
+                            <rect key="frame" x="0.0" y="52" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="9mH-Eb-0aB"/>
+                                <constraint firstAttribute="height" constant="44" id="YPV-IJ-dhy"/>
+                            </constraints>
+                            <state key="normal" image="ic_stories_mic_on"/>
+                            <connections>
+                                <action selector="didTapToggleMic:" destination="-1" eventType="touchUpInside" id="ubS-n3-G5b"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVq-2Z-wpB">
+                            <rect key="frame" x="0.0" y="104" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="20g-ud-UZy"/>
+                                <constraint firstAttribute="height" constant="44" id="vN2-5p-n52"/>
+                            </constraints>
+                            <state key="normal" image="stories_camera_switch_icon"/>
+                            <connections>
+                                <action selector="didTapSwitchCamera:" destination="-1" eventType="touchUpInside" id="mDI-t2-S81"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk5-QK-iL5">
+                    <rect key="frame" x="10" y="63" width="40" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="TOZ-ty-0Ax"/>
+                        <constraint firstAttribute="height" constant="30" id="VIf-E1-iYV"/>
+                    </constraints>
+                    <state key="normal" image="stories_back_icon"/>
+                    <connections>
+                        <action selector="didTapBack:" destination="-1" eventType="touchUpInside" id="9NN-02-I2R"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUM-ye-wJa">
+                    <rect key="frame" x="19" y="54" width="376" height="3"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="D8L-Tk-Esk">
+                            <rect key="frame" x="0.0" y="0.0" width="376" height="3"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1019607843" green="0.062745098040000002" blue="0.20784313730000001" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="D8L-Tk-Esk" firstAttribute="top" secondItem="dUM-ye-wJa" secondAttribute="top" id="56D-Bo-VqG"/>
+                        <constraint firstAttribute="height" constant="3" id="GdR-xy-A1a"/>
+                        <constraint firstItem="D8L-Tk-Esk" firstAttribute="leading" secondItem="dUM-ye-wJa" secondAttribute="leading" id="Hsl-Vc-Ncj"/>
+                        <constraint firstAttribute="trailing" secondItem="D8L-Tk-Esk" secondAttribute="trailing" id="ODb-xN-9kw"/>
+                        <constraint firstAttribute="bottom" secondItem="D8L-Tk-Esk" secondAttribute="bottom" id="SI6-2z-A0i"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2dt-87-35M">
+                    <rect key="frame" x="264" y="794.5" width="107" height="41"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCU-77-dE2">
+                            <rect key="frame" x="0.0" y="9.5" width="36" height="22"/>
+                            <state key="normal" image="stories_remove_video_icon"/>
+                            <connections>
+                                <action selector="didTapRemoveVideo:" destination="-1" eventType="touchUpInside" id="UnM-xp-rBT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suf-0x-7ha">
+                            <rect key="frame" x="66" y="0.0" width="41" height="41"/>
+                            <state key="normal" image="stories_confirm_icon"/>
+                            <connections>
+                                <action selector="didTapConfirm:" destination="-1" eventType="touchUpInside" id="fzo-xg-Kie"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sr-QD-tEV">
+                    <rect key="frame" x="170" y="778" width="74" height="74"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="74" id="KTm-aI-Fiw"/>
+                        <constraint firstAttribute="height" constant="74" id="UEe-Xu-g9P"/>
+                    </constraints>
+                    <state key="normal" image="stories_record_icon"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="37"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapToggleRecord:" destination="-1" eventType="touchUpInside" id="G81-SR-Lyf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dUM-ye-wJa" secondAttribute="trailing" constant="19" id="3w6-BE-CRL"/>
+                <constraint firstItem="fk5-QK-iL5" firstAttribute="top" secondItem="dUM-ye-wJa" secondAttribute="bottom" constant="6" id="7FD-62-crl"/>
+                <constraint firstAttribute="bottom" secondItem="zi5-co-VAn" secondAttribute="bottom" id="95G-p8-dbB"/>
+                <constraint firstItem="7Sr-QD-tEV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ANc-f8-Au7"/>
+                <constraint firstItem="zi5-co-VAn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FHe-b8-pdA"/>
+                <constraint firstItem="zi5-co-VAn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="U9m-GG-Bp4"/>
+                <constraint firstItem="dUM-ye-wJa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="19" id="Vl0-0X-yZu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7Sr-QD-tEV" secondAttribute="bottom" constant="10" id="XVg-3b-jib"/>
+                <constraint firstItem="2dt-87-35M" firstAttribute="centerY" secondItem="7Sr-QD-tEV" secondAttribute="centerY" id="bHj-jt-4Uf"/>
+                <constraint firstItem="dUM-ye-wJa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="nSy-al-1IX"/>
+                <constraint firstItem="2dt-87-35M" firstAttribute="leading" secondItem="7Sr-QD-tEV" secondAttribute="trailing" constant="20" id="nXc-xt-cWR"/>
+                <constraint firstItem="fk5-QK-iL5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="oQW-Nq-1wK"/>
+                <constraint firstItem="pQM-g9-ibd" firstAttribute="top" secondItem="dUM-ye-wJa" secondAttribute="bottom" constant="1" id="wQG-vX-7GG"/>
+                <constraint firstItem="zi5-co-VAn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yEU-mb-Boe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pQM-g9-ibd" secondAttribute="trailing" constant="6" id="zsx-8C-bOr"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="76.339285714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_stories_mic_on" width="20" height="28"/>
+        <image name="stories_back_icon" width="21" height="16"/>
+        <image name="stories_camera_switch_icon" width="22" height="22"/>
+        <image name="stories_confirm_icon" width="41" height="41"/>
+        <image name="stories_filters_icon" width="24" height="23"/>
+        <image name="stories_flash_on_icon" width="20" height="26"/>
+        <image name="stories_record_icon" width="45.5" height="45.5"/>
+        <image name="stories_remove_video_icon" width="36" height="20"/>
+    </resources>
+</document>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoriesMenuView" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="allLabel" destination="C8o-ca-iLx" id="1OK-Ei-3kp"/>
+                <outlet property="myInterestsLabel" destination="rMg-rx-ZQy" id="ztd-nD-ikt"/>
+                <outlet property="myLabel" destination="c39-kr-BfU" id="Tip-t8-hgu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="259" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyI-wD-x72">
+                    <rect key="frame" x="0.0" y="0.0" width="259" height="32"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4c-qY-Ulm">
+                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ob-ij-Jgx" userLabel="SearchButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                    <state key="normal" image="search_stories_icon"/>
+                                    <connections>
+                                        <action selector="searchAction:" destination="-1" eventType="touchUpInside" id="ILx-jD-pA0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="3Ob-ij-Jgx" firstAttribute="top" secondItem="P4c-qY-Ulm" secondAttribute="top" id="9gY-Z2-vPb"/>
+                                <constraint firstItem="3Ob-ij-Jgx" firstAttribute="leading" secondItem="P4c-qY-Ulm" secondAttribute="leading" id="Lf0-KU-Heq"/>
+                                <constraint firstAttribute="width" constant="32" id="aR6-lT-MFZ"/>
+                                <constraint firstAttribute="trailing" secondItem="3Ob-ij-Jgx" secondAttribute="trailing" id="cdw-B6-AFS"/>
+                                <constraint firstAttribute="bottom" secondItem="3Ob-ij-Jgx" secondAttribute="bottom" id="t7V-T1-kBn"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xm-yF-krz">
+                            <rect key="frame" x="82" y="0.0" width="177" height="32"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHA-Tv-dOc">
+                                    <rect key="frame" x="0.0" y="0.0" width="38" height="32"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8o-ca-iLx" customClass="DoubleStrokedLabel" customModule="Bestyn" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="38" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="C8o-ca-iLx" secondAttribute="trailing" id="E5O-ND-8YK"/>
+                                        <constraint firstAttribute="bottom" secondItem="C8o-ca-iLx" secondAttribute="bottom" id="Vrd-wj-Mcm"/>
+                                        <constraint firstItem="C8o-ca-iLx" firstAttribute="top" secondItem="gHA-Tv-dOc" secondAttribute="top" id="VxW-dv-20f"/>
+                                        <constraint firstAttribute="width" constant="38" id="an8-cw-AmG"/>
+                                        <constraint firstItem="C8o-ca-iLx" firstAttribute="leading" secondItem="gHA-Tv-dOc" secondAttribute="leading" id="cSv-TJ-XWL"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBB-0I-4iQ">
+                                    <rect key="frame" x="38" y="0.0" width="67" height="32"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMg-rx-ZQy" customClass="DoubleStrokedLabel" customModule="Bestyn" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="67" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="rMg-rx-ZQy" secondAttribute="bottom" id="DJz-XJ-8Pq"/>
+                                        <constraint firstItem="rMg-rx-ZQy" firstAttribute="leading" secondItem="yBB-0I-4iQ" secondAttribute="leading" id="VdC-y8-NEJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="rMg-rx-ZQy" secondAttribute="trailing" id="ZwA-qF-7df"/>
+                                        <constraint firstAttribute="width" constant="67" id="egU-JC-9Ea"/>
+                                        <constraint firstItem="rMg-rx-ZQy" firstAttribute="top" secondItem="yBB-0I-4iQ" secondAttribute="top" id="vt7-P0-A4B"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3U-CH-gYB">
+                                    <rect key="frame" x="105" y="0.0" width="72" height="32"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c39-kr-BfU" customClass="DoubleStrokedLabel" customModule="Bestyn" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="72" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="c39-kr-BfU" secondAttribute="bottom" id="1tY-72-tCY"/>
+                                        <constraint firstAttribute="trailing" secondItem="c39-kr-BfU" secondAttribute="trailing" id="Ogy-U3-cry"/>
+                                        <constraint firstItem="c39-kr-BfU" firstAttribute="top" secondItem="v3U-CH-gYB" secondAttribute="top" id="PHB-wf-QUy"/>
+                                        <constraint firstAttribute="width" constant="72" id="gIH-0c-7mv"/>
+                                        <constraint firstItem="c39-kr-BfU" firstAttribute="leading" secondItem="v3U-CH-gYB" secondAttribute="leading" id="mSo-E6-ysR"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="3Xm-yF-krz" firstAttribute="leading" secondItem="P4c-qY-Ulm" secondAttribute="trailing" constant="50" id="2Xy-qV-kfd"/>
+                        <constraint firstAttribute="trailing" secondItem="3Xm-yF-krz" secondAttribute="trailing" id="6Ma-Df-4x8"/>
+                        <constraint firstAttribute="bottom" secondItem="3Xm-yF-krz" secondAttribute="bottom" id="7wr-em-lA6"/>
+                        <constraint firstItem="P4c-qY-Ulm" firstAttribute="top" secondItem="GyI-wD-x72" secondAttribute="top" id="HXm-XC-tsW"/>
+                        <constraint firstAttribute="width" constant="259" id="WMm-83-eCf"/>
+                        <constraint firstAttribute="height" constant="32" id="XXb-fS-Bfb"/>
+                        <constraint firstItem="3Xm-yF-krz" firstAttribute="top" secondItem="GyI-wD-x72" secondAttribute="top" id="ilz-we-qdF"/>
+                        <constraint firstAttribute="bottom" secondItem="P4c-qY-Ulm" secondAttribute="bottom" id="nY8-eH-3XK"/>
+                        <constraint firstItem="P4c-qY-Ulm" firstAttribute="leading" secondItem="GyI-wD-x72" secondAttribute="leading" id="vfQ-rg-UL6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GyI-wD-x72" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AtZ-ck-1CU"/>
+                <constraint firstItem="GyI-wD-x72" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="O3g-oD-niy"/>
+                <constraint firstAttribute="bottom" secondItem="GyI-wD-x72" secondAttribute="bottom" id="jsM-Zp-aIH"/>
+                <constraint firstAttribute="trailing" secondItem="GyI-wD-x72" secondAttribute="trailing" id="wvD-nh-fLZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="25.362318840579711" y="-177.12053571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search_stories_icon" width="32" height="32"/>
+    </resources>
+</document>

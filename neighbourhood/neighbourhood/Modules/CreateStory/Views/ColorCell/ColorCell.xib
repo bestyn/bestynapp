@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="colorCell" id="gTV-IL-0wX" customClass="ColorCell" customModule="Bestyn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="146" height="106"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="146" height="106"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qak-5c-ae7">
+                        <rect key="frame" x="61" y="41" width="24" height="24"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_editor_clear_color_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Eeq-QL-Vnv">
+                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eeq-QL-Vnv" firstAttribute="top" secondItem="Qak-5c-ae7" secondAttribute="top" id="3f5-ZQ-kS4"/>
+                            <constraint firstItem="Eeq-QL-Vnv" firstAttribute="leading" secondItem="Qak-5c-ae7" secondAttribute="leading" id="ECt-Va-dZ6"/>
+                            <constraint firstAttribute="trailing" secondItem="Eeq-QL-Vnv" secondAttribute="trailing" id="YOs-bd-gYG"/>
+                            <constraint firstAttribute="bottom" secondItem="Eeq-QL-Vnv" secondAttribute="bottom" id="o0P-za-FZT"/>
+                            <constraint firstAttribute="width" constant="24" id="qGR-iK-OGO"/>
+                            <constraint firstAttribute="height" constant="24" id="xKZ-7S-lO6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Qak-5c-ae7" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ox6-68-4Z9"/>
+                <constraint firstItem="Qak-5c-ae7" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="z8h-9W-pYG"/>
+            </constraints>
+            <size key="customSize" width="146" height="106"/>
+            <connections>
+                <outlet property="clearColorImageVIew" destination="Eeq-QL-Vnv" id="bQx-yo-UXR"/>
+                <outlet property="colorView" destination="Qak-5c-ae7" id="7Tc-Pg-hIm"/>
+            </connections>
+            <point key="canvasLocation" x="175.36231884057972" y="100.44642857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="text_editor_clear_color_icon" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

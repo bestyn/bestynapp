@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlanView" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="iN0-l3-epB" id="oS5-I7-hPW"/>
+                <outlet property="checkImageView" destination="B5U-0q-ukL" id="ZwM-v3-9am"/>
+                <outlet property="milesLabel" destination="sHj-0h-n8N" id="bQk-CI-17m"/>
+                <outlet property="priceLabel" destination="EWD-F9-wZV" id="cKs-TB-V9F"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="198"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="rFv-sB-6TX">
+                    <rect key="frame" x="30" y="75.5" width="354" height="47"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHj-0h-n8N">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="27"/>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 50.00 /month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWD-F9-wZV">
+                            <rect key="frame" x="0.0" y="27" width="354" height="20"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_selected_plan" translatesAutoresizingMaskIntoConstraints="NO" id="B5U-0q-ukL">
+                    <rect key="frame" x="372" y="88" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="2xe-dY-FIp"/>
+                        <constraint firstAttribute="width" constant="22" id="arB-I8-65x"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbz-YQ-W9y">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="198"/>
+                    <connections>
+                        <action selector="didTapView:" destination="-1" eventType="touchUpInside" id="b9k-hd-N5u"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="B5U-0q-ukL" secondAttribute="trailing" constant="20" id="2Rf-yv-tBy"/>
+                <constraint firstAttribute="bottom" secondItem="xbz-YQ-W9y" secondAttribute="bottom" id="Bxt-n0-UfH"/>
+                <constraint firstAttribute="trailing" secondItem="xbz-YQ-W9y" secondAttribute="trailing" id="Ccn-ty-KON"/>
+                <constraint firstItem="xbz-YQ-W9y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MBz-4e-3UT"/>
+                <constraint firstItem="rFv-sB-6TX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Y2A-oN-Mdk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rFv-sB-6TX" secondAttribute="trailing" constant="30" id="mQh-s8-JA7"/>
+                <constraint firstItem="rFv-sB-6TX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="pSf-pA-IN2"/>
+                <constraint firstItem="xbz-YQ-W9y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="syJ-UA-o5K"/>
+                <constraint firstItem="B5U-0q-ukL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vfJ-zH-IzF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-103.79464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_selected_plan" width="22" height="22"/>
+    </resources>
+</document>

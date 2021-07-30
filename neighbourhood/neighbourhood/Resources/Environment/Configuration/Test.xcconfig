@@ -1,0 +1,14 @@
+//
+//  Test.xcconfig
+//  neighbourhood
+//
+//  Created by Dioksa on 22.04.2020.
+//  Copyright © 2020 GBKSoft. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+//https://dev-bestyn-backend.ci.gbksoft.net/rest/v1/
+API_BASE_URL = https:/$()/test-bestyn-backend.ci.gbksoft.net/rest
+CENTRIFUGO_URL = wss:/$()/test-centrifugo-bestyn-backend.ci.gbksoft.net/connection/websocket
+REVIEW_API_BASE_URL = https:/$()/test-bestyn-backend.ci.gbksoft.net/rest

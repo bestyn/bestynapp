@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PublicOutcomeChatCell" id="BVX-UF-DHl" customClass="PublicOutcomeChatCell" customModule="Bestyn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BVX-UF-DHl" id="WgP-X8-Hzm">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hL-Ac-uf7">
+                        <rect key="frame" x="60" y="10" width="292" height="94"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7C-pa-wBF">
+                                <rect key="frame" x="12" y="8" width="268" height="18.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18.5" id="tDC-4T-OT9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
+                                <color key="textColor" name="whiteBackground"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SW-BS-N5c" customClass="CustomExpandableLabel" customModule="Bestyn" customModuleProvider="target">
+                                <rect key="frame" x="12" y="30.5" width="268" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8w5-Hp-kdE" customClass="ExpandableTextView" customModule="Bestyn" customModuleProvider="target">
+                                <rect key="frame" x="12" y="30.5" width="268" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" name="whiteBackground"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fBB-6R-4cc">
+                                <rect key="frame" x="232.5" y="73" width="47.5" height="13"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="18.00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taJ-Cw-aXO">
+                                        <rect key="frame" x="0.0" y="0.0" width="47.5" height="13"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                        <color key="textColor" name="whiteTransparent"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" edited" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mk-mm-w1n">
+                                        <rect key="frame" x="47.5" y="0.0" width="0.0" height="13"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                        <color key="textColor" name="whiteTransparent"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="headerViolet"/>
+                        <constraints>
+                            <constraint firstItem="8w5-Hp-kdE" firstAttribute="leading" secondItem="3hL-Ac-uf7" secondAttribute="leading" constant="12" id="2ya-R5-zev"/>
+                            <constraint firstItem="8w5-Hp-kdE" firstAttribute="top" secondItem="h7C-pa-wBF" secondAttribute="bottom" constant="4" id="9Nm-6s-pdD"/>
+                            <constraint firstItem="7SW-BS-N5c" firstAttribute="top" secondItem="h7C-pa-wBF" secondAttribute="bottom" constant="4" id="HdF-7c-wZX"/>
+                            <constraint firstAttribute="trailing" secondItem="h7C-pa-wBF" secondAttribute="trailing" constant="12" id="Kcu-y5-e2s"/>
+                            <constraint firstAttribute="trailing" secondItem="8w5-Hp-kdE" secondAttribute="trailing" constant="12" id="KeZ-C3-D1y"/>
+                            <constraint firstAttribute="bottom" secondItem="fBB-6R-4cc" secondAttribute="bottom" constant="8" id="QfE-c3-qEq"/>
+                            <constraint firstAttribute="trailing" secondItem="fBB-6R-4cc" secondAttribute="trailing" constant="12" id="Qlh-cu-yZe"/>
+                            <constraint firstItem="h7C-pa-wBF" firstAttribute="top" secondItem="3hL-Ac-uf7" secondAttribute="top" constant="8" id="RTc-K5-eLk"/>
+                            <constraint firstItem="fBB-6R-4cc" firstAttribute="top" secondItem="7SW-BS-N5c" secondAttribute="bottom" constant="4" id="SZR-vb-Hwf"/>
+                            <constraint firstAttribute="trailing" secondItem="7SW-BS-N5c" secondAttribute="trailing" constant="12" id="bas-yI-reb"/>
+                            <constraint firstItem="fBB-6R-4cc" firstAttribute="top" secondItem="8w5-Hp-kdE" secondAttribute="bottom" constant="4" id="lyw-Hq-sMf"/>
+                            <constraint firstItem="h7C-pa-wBF" firstAttribute="leading" secondItem="3hL-Ac-uf7" secondAttribute="leading" constant="12" id="oAe-l9-YiO"/>
+                            <constraint firstItem="7SW-BS-N5c" firstAttribute="leading" secondItem="3hL-Ac-uf7" secondAttribute="leading" constant="12" id="q7I-Ht-3Rq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8w5-Hp-kdE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUU-u6-Le7" customClass="SmallAvatarView" customModule="Bestyn" customModuleProvider="target">
+                        <rect key="frame" x="360" y="70" width="34" height="34"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="8v2-rB-icP"/>
+                            <constraint firstAttribute="width" constant="34" id="VhI-sw-e5H"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="noStroke" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxQ-s9-4qq">
+                        <rect key="frame" x="352" y="62" width="62" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="8FQ-lD-3ns"/>
+                        </constraints>
+                        <connections>
+                            <action selector="profileImageDidTap:" destination="BVX-UF-DHl" eventType="touchUpInside" id="Jf1-3f-NyD"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="XxQ-s9-4qq" firstAttribute="leading" secondItem="3hL-Ac-uf7" secondAttribute="trailing" id="0pU-iN-hbZ"/>
+                    <constraint firstItem="3hL-Ac-uf7" firstAttribute="leading" secondItem="WgP-X8-Hzm" secondAttribute="leading" constant="60" id="5vi-Dx-XKJ"/>
+                    <constraint firstAttribute="bottom" secondItem="FUU-u6-Le7" secondAttribute="bottom" constant="8" id="Ef6-d5-psN"/>
+                    <constraint firstItem="3hL-Ac-uf7" firstAttribute="top" secondItem="WgP-X8-Hzm" secondAttribute="top" constant="10" id="Fti-Ss-ik9"/>
+                    <constraint firstAttribute="trailing" secondItem="XxQ-s9-4qq" secondAttribute="trailing" id="Sw4-96-wyf"/>
+                    <constraint firstAttribute="bottom" secondItem="3hL-Ac-uf7" secondAttribute="bottom" constant="8" id="gHj-Hi-Ddh"/>
+                    <constraint firstAttribute="bottom" secondItem="XxQ-s9-4qq" secondAttribute="bottom" id="lUp-Bt-0E0"/>
+                    <constraint firstAttribute="trailing" secondItem="FUU-u6-Le7" secondAttribute="trailing" constant="20" id="oPV-Yj-DZh"/>
+                    <constraint firstItem="FUU-u6-Le7" firstAttribute="leading" secondItem="3hL-Ac-uf7" secondAttribute="trailing" constant="8" id="xFv-sl-kWa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="avatarView" destination="FUU-u6-Le7" id="m1q-5h-xBZ"/>
+                <outlet property="chatBackgroundView" destination="3hL-Ac-uf7" id="ZVs-bl-DVf"/>
+                <outlet property="chatMessageLabel" destination="7SW-BS-N5c" id="QYZ-ID-QYq"/>
+                <outlet property="editLabel" destination="5Mk-mm-w1n" id="lXo-16-k2I"/>
+                <outlet property="messagDateLabel" destination="taJ-Cw-aXO" id="H0v-gz-tXg"/>
+                <outlet property="profileNameLabel" destination="h7C-pa-wBF" id="8wR-Sx-US2"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="8w5-Hp-kdE">
+            <size key="intrinsicContentSize" width="-1" height="309"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="headerViolet">
+            <color red="0.55686274509803924" green="0.41960784313725491" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteTransparent">
+            <color red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

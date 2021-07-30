@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioTrackSlider" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="audioVisualisationView" destination="Uro-g8-5pf" id="JrQ-nD-NPY"/>
+                <outlet property="currentPositionLabel" destination="WI2-hk-3bg" id="SMs-rN-2Rc"/>
+                <outlet property="handleIndicatorView" destination="qca-9W-kQE" id="Bcx-Cc-3eM"/>
+                <outlet property="handleView" destination="vJp-wR-3Zh" id="tel-8z-ivL"/>
+                <outlet property="playButton" destination="DdE-aj-Z0f" id="fBc-sy-2tR"/>
+                <outlet property="totalLengthLabel" destination="RJO-vr-nhA" id="LaF-Fe-WzL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y89-i8-Q89">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdE-aj-Z0f">
+                            <rect key="frame" x="0.0" y="38" width="39" height="39"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="39" id="2Hu-m1-VI3"/>
+                                <constraint firstAttribute="height" constant="39" id="YQg-Nb-6d9"/>
+                            </constraints>
+                            <state key="normal" image="ic_audio_track_play"/>
+                            <connections>
+                                <action selector="didTapTogglePlay:" destination="-1" eventType="touchUpInside" id="zjM-UL-9gT"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mrW-dg-pqN">
+                            <rect key="frame" x="51" y="29.5" width="316" height="56"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ete-5x-P6x">
+                                    <rect key="frame" x="0.0" y="0.0" width="316" height="39"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uro-g8-5pf" customClass="AudioVisualisationView" customModule="Bestyn" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="11" width="316" height="17"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="sa9-BP-sDQ"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" id="vJp-wR-3Zh">
+                                            <rect key="frame" x="-10" y="0.0" width="20" height="39"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qca-9W-kQE">
+                                                    <rect key="frame" x="8.5" y="0.0" width="3" height="39"/>
+                                                    <color key="backgroundColor" name="blueButton"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="3" id="by1-qf-SHa"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="qca-9W-kQE" secondAttribute="bottom" id="6fM-Ll-9bq"/>
+                                                <constraint firstAttribute="height" constant="39" id="Ffb-p2-wbQ"/>
+                                                <constraint firstItem="qca-9W-kQE" firstAttribute="centerX" secondItem="vJp-wR-3Zh" secondAttribute="centerX" id="coC-rE-pmo"/>
+                                                <constraint firstAttribute="width" constant="20" id="fSa-2o-P5t"/>
+                                                <constraint firstItem="qca-9W-kQE" firstAttribute="top" secondItem="vJp-wR-3Zh" secondAttribute="top" id="vCr-i6-bhj"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Uro-g8-5pf" secondAttribute="trailing" id="7gE-Sn-adb"/>
+                                        <constraint firstItem="Uro-g8-5pf" firstAttribute="centerY" secondItem="ete-5x-P6x" secondAttribute="centerY" id="P8D-bQ-lfn"/>
+                                        <constraint firstItem="Uro-g8-5pf" firstAttribute="leading" secondItem="ete-5x-P6x" secondAttribute="leading" id="itE-hp-bpW"/>
+                                        <constraint firstAttribute="height" constant="39" id="r8g-kp-FyZ"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5F-n1-QKn">
+                                    <rect key="frame" x="0.0" y="39" width="316" height="17"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WI2-hk-3bg">
+                                            <rect key="frame" x="-16" y="0.0" width="50" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="e26-Pb-bLV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                            <color key="textColor" name="blueButton"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="SnA-Pe-oVy"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJO-vr-nhA">
+                            <rect key="frame" x="379" y="49" width="35" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="GgG-g3-EAX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                            <color key="textColor" red="0.5607843137254902" green="0.45490196078431372" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Y89-i8-Q89" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="31N-il-62c"/>
+                <constraint firstItem="Y89-i8-Q89" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="90p-fL-Fhr"/>
+                <constraint firstAttribute="bottom" secondItem="Y89-i8-Q89" secondAttribute="bottom" id="Skg-xj-uRJ"/>
+                <constraint firstAttribute="trailing" secondItem="Y89-i8-Q89" secondAttribute="trailing" id="cfq-Tv-uPh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="100.00000000000001" y="-169.75446428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_audio_track_play" width="39" height="41"/>
+        <namedColor name="blueButton">
+            <color red="0.46666666666666667" green="0.32549019607843138" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

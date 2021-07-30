@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "neighbourhood_neighbourhood_Resources_xcassets_Assets.xcassets_Chats_BackgroundImages_img1.imageset_Rectangle 254@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "neighbourhood_neighbourhood_Resources_xcassets_Assets.xcassets_Chats_BackgroundImages_img1.imageset_Rectangle 254@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

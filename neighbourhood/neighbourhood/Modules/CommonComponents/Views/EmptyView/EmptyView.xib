@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyView" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="4fY-Qb-w3z"/>
+                <outlet property="imageView" destination="tWY-3q-vOn" id="M8S-3b-C4a"/>
+                <outlet property="interestsButton" destination="BTf-Ba-fNd" id="W4i-bL-wDU"/>
+                <outlet property="textLabel" destination="h3I-U1-mif" id="LEN-rn-6aB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="432"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Sdd-7r-f1l">
+                    <rect key="frame" x="20" y="100" width="374" height="188"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_post_icon" translatesAutoresizingMaskIntoConstraints="NO" id="tWY-3q-vOn">
+                            <rect key="frame" x="102" y="0.0" width="170.5" height="156.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no posts of such type" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3I-U1-mif">
+                            <rect key="frame" x="88" y="171.5" width="198.5" height="16.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                            <color key="textColor" name="darkGrey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTf-Ba-fNd">
+                    <rect key="frame" x="128.5" y="308" width="157" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ulv-pc-VcE"/>
+                        <constraint firstAttribute="width" constant="157" id="cMT-DF-jrr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                    <state key="normal" title="My Interests">
+                        <color key="titleColor" name="blueButton"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="blueButton"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="interestsButtonDidTap:" destination="-1" eventType="touchUpInside" id="SlV-WP-m2U"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Sdd-7r-f1l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="3MN-MO-cyv"/>
+                <constraint firstItem="Sdd-7r-f1l" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="855-Td-Vzy"/>
+                <constraint firstItem="BTf-Ba-fNd" firstAttribute="top" secondItem="Sdd-7r-f1l" secondAttribute="bottom" constant="20" id="ND4-Oq-XTI"/>
+                <constraint firstItem="BTf-Ba-fNd" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="W88-b1-kHp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Sdd-7r-f1l" secondAttribute="trailing" constant="20" id="gtM-jq-SvV"/>
+                <constraint firstItem="Sdd-7r-f1l" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="tQy-gR-AFI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="124.6376811594203" y="-320.08928571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty_post_icon" width="170.5" height="156.5"/>
+        <namedColor name="blueButton">
+            <color red="0.46666666666666667" green="0.32549019607843138" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGrey">
+            <color red="0.4392156862745098" green="0.45098039215686275" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

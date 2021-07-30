@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertViewController" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonsStackView" destination="adB-Sb-iOV" id="AXi-2J-b8J"/>
+                <outlet property="linkButton" destination="0Ay-RY-MNB" id="Ysv-gy-hsa"/>
+                <outlet property="messageLabel" destination="FQZ-Cx-hly" id="WC1-MI-xyl"/>
+                <outlet property="negativeButton" destination="nmi-OB-CMj" id="8XY-l3-3Xo"/>
+                <outlet property="popupView" destination="6yi-JS-bas" id="sl9-dd-KbQ"/>
+                <outlet property="positiveButton" destination="cLX-7t-wrV" id="vvB-B3-Nz7"/>
+                <outlet property="titleLabel" destination="fP1-Nx-hCO" id="U3X-Oo-4Z6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpD-iJ-8uW">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didTapDismiss:" destination="-1" eventType="touchUpInside" id="Hs7-3F-7QH"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yi-JS-bas">
+                    <rect key="frame" x="40" y="313.5" width="334" height="269.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hMg-rD-pX5">
+                            <rect key="frame" x="30" y="40" width="274" height="115.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IU5-Ku-SzX">
+                                    <rect key="frame" x="0.0" y="0.0" width="274" height="63.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP1-Nx-hCO" customClass="HeadingLabel" customModule="Bestyn" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="274" height="33.5"/>
+                                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="21"/>
+                                            <color key="textColor" name="mainBlack"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="sizeAdapter">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQZ-Cx-hly" customClass="ParagraphLabel" customModule="Bestyn" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="43.5" width="274" height="20"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                            <color key="textColor" name="mainBlack"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="sizeAdapter">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="FQZ-Cx-hly" firstAttribute="top" secondItem="fP1-Nx-hCO" secondAttribute="bottom" constant="10" id="RUn-kb-Egd"/>
+                                        <constraint firstAttribute="bottom" secondItem="FQZ-Cx-hly" secondAttribute="bottom" id="bib-WR-7Pk"/>
+                                        <constraint firstAttribute="trailing" secondItem="FQZ-Cx-hly" secondAttribute="trailing" id="cs9-Lj-p3d"/>
+                                        <constraint firstAttribute="trailing" secondItem="fP1-Nx-hCO" secondAttribute="trailing" id="gQv-Zc-dy5"/>
+                                        <constraint firstItem="FQZ-Cx-hly" firstAttribute="leading" secondItem="IU5-Ku-SzX" secondAttribute="leading" id="i1R-Bl-nXW"/>
+                                        <constraint firstItem="fP1-Nx-hCO" firstAttribute="top" secondItem="IU5-Ku-SzX" secondAttribute="top" id="tUU-dX-15b"/>
+                                        <constraint firstItem="fP1-Nx-hCO" firstAttribute="leading" secondItem="IU5-Ku-SzX" secondAttribute="leading" id="zf0-Yd-SZ6"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ay-RY-MNB">
+                                    <rect key="frame" x="0.0" y="83.5" width="274" height="32"/>
+                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                    <state key="normal" title="Link">
+                                        <color key="titleColor" name="accentBlue"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="didTapLink:" destination="-1" eventType="touchUpInside" id="90t-KM-2Lc"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="adB-Sb-iOV">
+                            <rect key="frame" x="52" y="185.5" width="230" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmi-OB-CMj" customClass="GreyButton" customModule="Bestyn" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="W7t-cx-Oh4"/>
+                                        <constraint firstAttribute="width" constant="110" id="ytT-wY-SzE"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isBigTitle" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapCancel:" destination="-1" eventType="touchUpInside" id="1Ki-yQ-dhx"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLX-7t-wrV" customClass="DarkButton" customModule="Bestyn" customModuleProvider="target">
+                                    <rect key="frame" x="120" y="0.0" width="110" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="7jo-yg-vZP"/>
+                                        <constraint firstAttribute="width" constant="110" id="Gu2-vD-aiO"/>
+                                    </constraints>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" red="0.96862745100000003" green="0.92549019610000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isBigTitle" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapDone:" destination="-1" eventType="touchUpInside" id="7NO-gN-gAr"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="adB-Sb-iOV" firstAttribute="top" secondItem="hMg-rD-pX5" secondAttribute="bottom" constant="30" id="3OV-37-bfm"/>
+                        <constraint firstItem="hMg-rD-pX5" firstAttribute="top" secondItem="6yi-JS-bas" secondAttribute="top" constant="40" id="Gb6-L2-fdx"/>
+                        <constraint firstItem="hMg-rD-pX5" firstAttribute="leading" secondItem="6yi-JS-bas" secondAttribute="leading" constant="30" id="Xqe-O8-Ihe"/>
+                        <constraint firstItem="adB-Sb-iOV" firstAttribute="centerX" secondItem="6yi-JS-bas" secondAttribute="centerX" id="qTu-qS-zux"/>
+                        <constraint firstAttribute="bottom" secondItem="adB-Sb-iOV" secondAttribute="bottom" constant="40" id="wJw-nE-E9R"/>
+                        <constraint firstAttribute="trailing" secondItem="hMg-rD-pX5" secondAttribute="trailing" constant="30" id="xRd-xF-mNN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.01" green="0.01" blue="0.01" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VpD-iJ-8uW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="B7W-6L-bmW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6yi-JS-bas" secondAttribute="trailing" constant="40" id="GqN-lz-O5D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VpD-iJ-8uW" secondAttribute="trailing" id="Wqq-nC-qhS"/>
+                <constraint firstItem="VpD-iJ-8uW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="f1A-fW-yos"/>
+                <constraint firstItem="6yi-JS-bas" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jFb-Cl-Kuo"/>
+                <constraint firstItem="6yi-JS-bas" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="r5j-cO-hIi"/>
+                <constraint firstAttribute="bottom" secondItem="VpD-iJ-8uW" secondAttribute="bottom" id="yfd-HS-3sc"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="150"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="FQZ-Cx-hly">
+            <size key="intrinsicContentSize" width="37.5" height="20"/>
+        </designable>
+        <designable name="cLX-7t-wrV">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+        <designable name="fP1-Nx-hCO">
+            <size key="intrinsicContentSize" width="57" height="29.5"/>
+        </designable>
+        <designable name="nmi-OB-CMj">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="accentBlue">
+            <color red="0.3843137254901961" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainBlack">
+            <color red="0.10196078431372549" green="0.062745098039215685" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

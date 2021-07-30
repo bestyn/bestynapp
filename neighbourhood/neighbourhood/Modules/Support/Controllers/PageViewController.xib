@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageViewController" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="textView" destination="ux0-2Z-JUo" id="aSA-hB-KdO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="706-VE-VN0" customClass="ShadowRoundedView" customModule="Bestyn" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="414" height="837"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ux0-2Z-JUo">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="803"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="ux0-2Z-JUo" firstAttribute="leading" secondItem="706-VE-VN0" secondAttribute="leading" id="X0H-tb-UOI"/>
+                        <constraint firstItem="ux0-2Z-JUo" firstAttribute="top" secondItem="706-VE-VN0" secondAttribute="top" id="qbm-ca-gEj"/>
+                        <constraint firstAttribute="trailing" secondItem="ux0-2Z-JUo" secondAttribute="trailing" id="t7M-Mu-h13"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="greyBackground"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="706-VE-VN0" secondAttribute="bottom" id="5mY-y1-oT9"/>
+                <constraint firstItem="ux0-2Z-JUo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="A03-WP-NpL"/>
+                <constraint firstItem="706-VE-VN0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="IpD-V8-hXi"/>
+                <constraint firstItem="706-VE-VN0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b2f-CF-wOK"/>
+                <constraint firstItem="706-VE-VN0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="dW5-n3-x0S"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="greyBackground">
+            <color red="0.93725490196078431" green="0.94509803921568625" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

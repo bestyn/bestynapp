@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EffectDurationViewController" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="contentContainerView" destination="Xfs-62-3Hb" id="RWA-3r-Pya"/>
+                <outlet property="playButton" destination="CLn-oB-kK8" id="hXr-Lf-qYc"/>
+                <outlet property="videoPreviewView" destination="93d-3E-u7x" id="99K-fb-YIo"/>
+                <outlet property="videoSlider" destination="fPl-bK-kbq" id="FZN-ro-IaA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25o-ga-J4B">
+                    <rect key="frame" x="0.0" y="44" width="414" height="38"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cE-IG-ufv">
+                            <rect key="frame" x="0.0" y="0.0" width="95" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="95" id="Lb2-hc-nVa"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                            <inset key="contentEdgeInsets" minX="19" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapCancel:" destination="-1" eventType="touchUpInside" id="9Oj-Bd-POl"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRn-WP-lvN">
+                            <rect key="frame" x="95" y="0.0" width="224" height="38"/>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reb-8U-mvf">
+                            <rect key="frame" x="319" y="0.0" width="95" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="95" id="2pp-hS-B8d"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="19" maxY="0.0"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapDone:" destination="-1" eventType="touchUpInside" id="rEP-bh-2Xm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="PJt-Z8-tFH"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93d-3E-u7x">
+                    <rect key="frame" x="19.5" y="92" width="375" height="666"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="93d-3E-u7x" secondAttribute="height" multiplier="9:16" id="WHe-6J-3hF"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfs-62-3Hb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HWw-Cc-Zfg">
+                    <rect key="frame" x="15" y="769" width="384" height="73"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLn-oB-kK8">
+                            <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
+                            <color key="backgroundColor" name="blackButton"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="Hs2-11-qaE"/>
+                                <constraint firstAttribute="width" constant="38" id="eDc-hj-hyW"/>
+                            </constraints>
+                            <state key="normal" image="stories_play_small_icon"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="19"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapTogglePlay:" destination="-1" eventType="touchUpInside" id="jOY-fe-r0I"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPl-bK-kbq" customClass="VideoSlider" customModule="Bestyn" customModuleProvider="target">
+                            <rect key="frame" x="43" y="0.0" width="341" height="73"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="73" id="st0-sT-ise"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HWw-Cc-Zfg" secondAttribute="bottom" constant="20" id="5su-5O-QMj"/>
+                <constraint firstItem="93d-3E-u7x" firstAttribute="top" secondItem="25o-ga-J4B" secondAttribute="bottom" constant="10" id="BRq-uy-Occ"/>
+                <constraint firstItem="Xfs-62-3Hb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HL4-mI-MoM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="25o-ga-J4B" secondAttribute="trailing" id="P1Q-zm-Mkv"/>
+                <constraint firstItem="25o-ga-J4B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PCP-25-Sot"/>
+                <constraint firstItem="25o-ga-J4B" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="R65-ty-VKZ"/>
+                <constraint firstItem="93d-3E-u7x" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RPS-4n-jQp"/>
+                <constraint firstItem="Xfs-62-3Hb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Vyd-4Y-9Ru"/>
+                <constraint firstItem="HWw-Cc-Zfg" firstAttribute="top" secondItem="93d-3E-u7x" secondAttribute="bottom" constant="11" id="a9P-mc-Xwt"/>
+                <constraint firstAttribute="trailing" secondItem="HWw-Cc-Zfg" secondAttribute="trailing" constant="15" id="fNN-aH-Pcm"/>
+                <constraint firstItem="Xfs-62-3Hb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hBz-ds-8cg"/>
+                <constraint firstItem="HWw-Cc-Zfg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="jTC-lv-gh3"/>
+                <constraint firstAttribute="bottom" secondItem="Xfs-62-3Hb" secondAttribute="bottom" id="xHv-MV-Njr"/>
+            </constraints>
+            <point key="canvasLocation" x="121.73913043478262" y="73.660714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="stories_play_small_icon" width="11" height="14"/>
+        <namedColor name="blackButton">
+            <color red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

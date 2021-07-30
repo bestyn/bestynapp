@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsHeaderView" customModule="neighbourhood" customModuleProvider="target">
+            <connections>
+                <outlet property="arrowImageView" destination="eEJ-NH-ytq" id="cVZ-hW-fNw"/>
+                <outlet property="iconImageView" destination="pmu-vZ-lsg" id="C3t-PI-rMh"/>
+                <outlet property="titleLabel" destination="4wz-VG-bnN" id="Znq-NR-Wlz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xVU-wx-pI8">
+                    <rect key="frame" x="20" y="18" width="374" height="20"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_icon" translatesAutoresizingMaskIntoConstraints="NO" id="pmu-vZ-lsg">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            <color key="tintColor" name="secondaryBlack"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="XrL-j5-ULV"/>
+                                <constraint firstAttribute="height" constant="20" id="mWV-58-xrd"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABcgfls" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wz-VG-bnN">
+                            <rect key="frame" x="35" y="2" width="304" height="16.5"/>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                            <color key="textColor" name="mainBlack"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_down" translatesAutoresizingMaskIntoConstraints="NO" id="eEJ-NH-ytq">
+                            <rect key="frame" x="354" y="0.0" width="20" height="20"/>
+                            <color key="tintColor" name="secondaryBlack"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="1jy-Gc-Vuw"/>
+                                <constraint firstAttribute="height" constant="20" id="E2T-tS-Vfy"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VU-DY-vul">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                    <connections>
+                        <action selector="didTapView:" destination="-1" eventType="touchUpInside" id="WzY-Dh-65H"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="3VU-DY-vul" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8mt-3A-wqs"/>
+                <constraint firstAttribute="trailing" secondItem="3VU-DY-vul" secondAttribute="trailing" id="9hh-4R-qiG"/>
+                <constraint firstItem="xVU-wx-pI8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="AG8-OS-KXu"/>
+                <constraint firstAttribute="trailing" secondItem="xVU-wx-pI8" secondAttribute="trailing" constant="20" id="Ivc-FH-RVU"/>
+                <constraint firstItem="3VU-DY-vul" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="L7W-Qx-iTp"/>
+                <constraint firstAttribute="bottom" secondItem="3VU-DY-vul" secondAttribute="bottom" id="Mau-Rq-xrF"/>
+                <constraint firstAttribute="bottom" secondItem="xVU-wx-pI8" secondAttribute="bottom" constant="17" id="gBZ-tX-1oy"/>
+                <constraint firstItem="xVU-wx-pI8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="jnS-Y2-Ct4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="55.915178571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_down" width="10" height="6"/>
+        <image name="profile_icon" width="20" height="20"/>
+        <namedColor name="mainBlack">
+            <color red="0.015686274509803921" green="0.086274509803921567" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryBlack">
+            <color red="0.21176470588235294" green="0.27450980392156865" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

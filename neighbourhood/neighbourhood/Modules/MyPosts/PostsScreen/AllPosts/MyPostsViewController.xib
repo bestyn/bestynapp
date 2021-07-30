@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPostsViewController" customModule="Bestyn" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="d3S-4j-Ynk" id="c2H-a4-I1n"/>
+                <outlet property="createdBottomView" destination="oVm-Hd-ofw" id="Oql-WD-pnV"/>
+                <outlet property="followBottomView" destination="DbA-kz-EZg" id="OXF-Ll-tvF"/>
+                <outlet property="followedPostsButton" destination="bZC-Rc-P55" id="XLo-lH-b1j"/>
+                <outlet property="myPostsButton" destination="Zid-9i-nvP" id="RmV-ET-KoX"/>
+                <outlet property="tagsCollectionView" destination="POE-se-9C7" id="anF-WH-Dvq"/>
+                <outlet property="topBarView" destination="Sqy-h7-W3o" id="ndq-pg-pHS"/>
+                <outlet property="view" destination="iN0-l3-epB" id="0gB-JV-Kpx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3S-4j-Ynk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" name="greyBackground"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-h7-W3o">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zyw-N8-zqU">
+                            <rect key="frame" x="0.0" y="54" width="414" height="82"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Oow-sX-emr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZC-Rc-P55">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                            <state key="normal" title="Followed">
+                                                <color key="titleColor" name="blueButton"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="didTapFollowedPosts:" destination="-1" eventType="touchUpInside" id="vF4-AX-bXy"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zid-9i-nvP">
+                                            <rect key="frame" x="207" y="0.0" width="207" height="30"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                            <state key="normal" title="Created">
+                                                <color key="titleColor" name="greyMedium"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="didTapMyPosts:" destination="-1" eventType="touchUpInside" id="GY3-6a-FVT"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="arp-ts-dMw"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hai-ge-IoR">
+                                    <rect key="frame" x="0.0" y="30" width="414" height="2"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DbA-kz-EZg">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="2"/>
+                                            <color key="backgroundColor" name="blueButton"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVm-Hd-ofw">
+                                            <rect key="frame" x="207" y="0.0" width="207" height="2"/>
+                                            <color key="backgroundColor" name="greyBackground"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="F2N-f3-gzX"/>
+                                    </constraints>
+                                </stackView>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="POE-se-9C7">
+                                    <rect key="frame" x="0.0" y="32" width="414" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="I3J-3I-8yo"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BML-t1-84c">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="Nwh-ed-7sz"/>
+                                        <outlet property="delegate" destination="-1" id="9w5-j9-08z"/>
+                                    </connections>
+                                </collectionView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="FNj-88-Dw0"/>
+                    <color key="backgroundColor" name="whiteBackground"/>
+                    <constraints>
+                        <constraint firstItem="Zyw-N8-zqU" firstAttribute="leading" secondItem="Sqy-h7-W3o" secondAttribute="leading" id="4A7-Zv-BW8"/>
+                        <constraint firstAttribute="bottom" secondItem="Zyw-N8-zqU" secondAttribute="bottom" id="HOp-t8-mR2"/>
+                        <constraint firstAttribute="trailing" secondItem="Zyw-N8-zqU" secondAttribute="trailing" id="Ufg-4m-8dy"/>
+                        <constraint firstItem="Zyw-N8-zqU" firstAttribute="top" secondItem="FNj-88-Dw0" secondAttribute="top" constant="10" id="wRO-Ax-tEG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="whiteBackground"/>
+            <constraints>
+                <constraint firstItem="d3S-4j-Ynk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5el-3I-Qze"/>
+                <constraint firstItem="d3S-4j-Ynk" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="SMG-Bm-BzY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Sqy-h7-W3o" secondAttribute="trailing" id="SWh-Qk-fMZ"/>
+                <constraint firstAttribute="bottom" secondItem="d3S-4j-Ynk" secondAttribute="bottom" id="THY-D8-Uhd"/>
+                <constraint firstItem="Sqy-h7-W3o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WME-pg-MXd"/>
+                <constraint firstItem="Sqy-h7-W3o" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lh5-r6-p9Z"/>
+                <constraint firstItem="d3S-4j-Ynk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lnt-KQ-ZJc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="blueButton">
+            <color red="0.46666666666666667" green="0.32549019607843138" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greyBackground">
+            <color red="0.93725490196078431" green="0.94509803921568625" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greyMedium">
+            <color red="0.61960784313725492" green="0.63137254901960782" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

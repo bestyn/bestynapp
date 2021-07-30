@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyInterestsView" customModule="neighbourhood" customModuleProvider="target">
+            <connections>
+                <outlet property="selectedInterestsTitleLabel" destination="DwA-3r-Rni" id="0ja-UD-Tei"/>
+                <outlet property="tagView" destination="pgR-Da-xrU" id="Owz-y5-fqY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="394"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Interests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwA-3r-Rni">
+                    <rect key="frame" x="20" y="8" width="113" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="KEi-Mh-rbi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                    <color key="textColor" name="mainBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-1u-umD">
+                    <rect key="frame" x="358" y="0.0" width="36" height="36"/>
+                    <state key="normal" image="edit_button_icon"/>
+                    <connections>
+                        <action selector="editButtonDidTap:" destination="-1" eventType="touchUpInside" id="vEP-bK-jwJ"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgR-Da-xrU" customClass="TagListView" customModule="TagListView">
+                    <rect key="frame" x="20" y="48" width="374" height="326"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                            <color key="value" name="accentBlue"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                            <color key="value" name="aliceBlue"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
+                            <real key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="paddingX">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pgR-Da-xrU" secondAttribute="trailing" constant="20" id="Cbn-Qt-hat"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pgR-Da-xrU" secondAttribute="bottom" constant="20" id="Fe5-5q-ozt"/>
+                <constraint firstItem="pgR-Da-xrU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="G1V-rr-gPK"/>
+                <constraint firstItem="pgR-Da-xrU" firstAttribute="top" secondItem="DwA-3r-Rni" secondAttribute="bottom" constant="20" id="GMA-PI-fx8"/>
+                <constraint firstAttribute="trailing" secondItem="1Og-1u-umD" secondAttribute="trailing" constant="20" id="JLK-D0-8gr"/>
+                <constraint firstItem="DwA-3r-Rni" firstAttribute="centerY" secondItem="1Og-1u-umD" secondAttribute="centerY" id="LH9-fs-4jy"/>
+                <constraint firstItem="1Og-1u-umD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DwA-3r-Rni" secondAttribute="trailing" constant="16" id="Nfy-xG-Oz9"/>
+                <constraint firstItem="1Og-1u-umD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YsZ-rE-2DV"/>
+                <constraint firstItem="DwA-3r-Rni" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="zmg-aB-dP8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="321.42857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="edit_button_icon" width="36" height="36"/>
+        <namedColor name="accentBlue">
+            <color red="0.3843137254901961" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="aliceBlue">
+            <color red="0.3843137254901961" green="0.0" blue="0.93333333333333335" alpha="0.079999998211860657" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainBlack">
+            <color red="0.10196078431372549" green="0.062745098039215685" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
